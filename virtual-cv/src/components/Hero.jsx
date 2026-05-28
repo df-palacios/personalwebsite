@@ -25,44 +25,80 @@ function Hero() {
               </p>
             </div>
 
+            {/* CONTACT BUTTONS */}
             <div className="flex flex-wrap gap-3">
 
-              <span className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400">
-                📍 Cali, Colombia
+              {/* LOCATION */}
+              <span className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400">
+                <img
+                  src="/mapsLogo.png"
+                  alt="Location"
+                  className="w-4 h-4 object-contain"
+                />
+
+                Cali, Colombia
               </span>
 
+              {/* EMAIL */}
               <a
                 href="mailto:ing.diegopalacios@outlook.com"
-                className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
               >
-                ✉️ Email
+                <img
+                  src="/emailLogo.png"
+                  alt="Email"
+                  className="w-4 h-4 object-contain"
+                />
+
+                Email
               </a>
 
+              {/* GITHUB */}
               <a
                 href="https://github.com/df-palacios"
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
               >
-                💻 GitHub
+                <img
+                  src="/githubLogo.png"
+                  alt="GitHub"
+                  className="w-4 h-4 object-contain"
+                />
+
+                GitHub
               </a>
 
+              {/* LINKEDIN */}
               <a
                 href="https://linkedin.com/in/dfpalacios"
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:border-white/10 hover:bg-white/10 transition"
               >
-                🔗 LinkedIn
+                <img
+                  src="/linkedinLogo.png"
+                  alt="LinkedIn"
+                  className="w-4 h-4 object-contain"
+                />
+
+                LinkedIn
               </a>
 
+              {/* WHATSAPP */}
               <a
                 href="https://wa.me/573137464587"
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-sm text-blue-300 hover:bg-blue-500/20 transition"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-sm text-blue-300 hover:bg-blue-500/20 transition"
               >
-                💬 WhatsApp
+                <img
+                  src="/whatsappLogo.png"
+                  alt="WhatsApp"
+                  className="w-4 h-4 object-contain"
+                />
+
+                WhatsApp
               </a>
 
             </div>
