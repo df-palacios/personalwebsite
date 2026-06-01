@@ -2,8 +2,9 @@
 
 :root {
   font-family: Inter, sans-serif;
-  color: #f3f4f6;
-  background-color: #0b0f19;
+
+  color: #111827;
+  background-color: #f8fafc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,8 +18,8 @@ html {
 
 body {
   margin: 0;
-  background: #0b0f19;
-  color: #f3f4f6;
+  background: #f8fafc;
+  color: #111827;
 }
 
 * {
@@ -26,9 +27,9 @@ body {
 }
 
 .section-title {
-  @apply text-3xl font-semibold mb-10 text-white;
+  @apply text-3xl font-semibold mb-10 text-gray-900;
 }
 
 .card {
-  @apply bg-[#111827] border border-white/5 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30;
+  @apply bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg;
 }
