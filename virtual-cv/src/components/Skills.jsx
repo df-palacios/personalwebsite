@@ -3,17 +3,23 @@ function Skills() {
     {
       title: "QA & Testing",
       skills: [
-        "Selenium",
+        "Selenium WebDriver",
         "Playwright",
         "Serenity BDD",
-        "Screenplay",
+        "Karate DSL",
         "Postman",
-        "JIRA"
+        "REST APIs",
+        "Functional Testing",
+        "Regression Testing",
+        "Screenplay",
+        "POM"
       ]
     },
     {
       title: "Development",
       skills: [
+        "Java",
+        "Python",
         "JavaScript",
         "TypeScript",
         "React",
@@ -23,23 +29,25 @@ function Skills() {
       ]
     },
     {
-      title: "Data & Analytics",
+      title: "Data & BI",
       skills: [
         "SQL",
-        "Excel",
         "Power BI",
-        "XML Analysis",
-        "Data Validation"
+        "Excel"
       ]
     },
     {
-      title: "DevOps & Infrastructure",
+      title: "Tools & Methodologies",
       skills: [
-        "Linux",
-        "Docker",
         "Git",
-        "REST APIs",
-        "Azure DevOps"
+        "GitHub",
+        "Jira",
+        "Azure DevOps",
+        "SCRUM",
+        "BDD",
+        "MVC",
+        "SOLID",
+        "Clean Code"
       ]
     }
   ]

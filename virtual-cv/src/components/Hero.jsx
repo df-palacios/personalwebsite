@@ -10,24 +10,24 @@ function Hero() {
 
             <div>
               <p className="text-blue-600 uppercase tracking-[0.2em] text-sm mb-4">
-                QA Automation • Full-Stack Developer
+                QA Automation Engineer • Full-Stack Developer
               </p>
 
               <h1 className="text-4xl md:text-[2.8rem] font-bold mb-5 leading-tight text-gray-900">
                 Diego Fernando Palacios
               </h1>
+
               <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
-                Electronic engineer with experience in software testing,
-                Selenium automation, REST APIs, React development,
-                Linux infrastructure, XML analysis and large-scale
-                data validation workflows.
+                Electronic Engineer with experience in QA Automation,
+                Software Testing and Full-Stack Development.
+                Skilled in Selenium, Playwright, Serenity BDD,
+                Karate DSL, REST APIs, React, Node.js and
+                data validation under Agile methodologies.
               </p>
             </div>
 
-            {/* CONTACT BUTTONS */}
             <div className="flex flex-wrap gap-3">
 
-              {/* LOCATION */}
               <span className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm text-gray-700 shadow-sm">
                 <img
                   src="/mapsLogo.png"
@@ -37,7 +37,6 @@ function Hero() {
                 Cali, Colombia
               </span>
 
-              {/* EMAIL */}
               <a
                 href="mailto:ing.diegopalacios@outlook.com"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm text-gray-700 shadow-sm hover:border-blue-300 hover:text-blue-600 transition"
@@ -50,7 +49,6 @@ function Hero() {
                 Email
               </a>
 
-              {/* GITHUB */}
               <a
                 href="https://github.com/df-palacios"
                 target="_blank"
@@ -65,7 +63,6 @@ function Hero() {
                 GitHub
               </a>
 
-              {/* LINKEDIN */}
               <a
                 href="https://linkedin.com/in/dfpalacios"
                 target="_blank"
@@ -80,7 +77,6 @@ function Hero() {
                 LinkedIn
               </a>
 
-              {/* WHATSAPP */}
               <a
                 href="https://wa.me/573137464587"
                 target="_blank"
