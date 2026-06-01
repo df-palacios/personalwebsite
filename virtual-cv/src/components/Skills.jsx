@@ -1,7 +1,7 @@
 function Skills() {
   const categories = [
     {
-      title: "QA Automation",
+      title: "QA & Testing",
       skills: [
         "Selenium",
         "Playwright",
@@ -19,13 +19,11 @@ function Skills() {
         "React",
         "Node.js",
         "NestJS",
-        "Laravel",
-        "PHP",
-        "Python"
+        "Laravel"
       ]
     },
     {
-      title: "Data Analysis",
+      title: "Data & Analytics",
       skills: [
         "SQL",
         "Excel",
@@ -35,33 +33,13 @@ function Skills() {
       ]
     },
     {
-      title: "Infrastructure",
+      title: "DevOps & Infrastructure",
       skills: [
         "Linux",
         "Docker",
         "Git",
         "REST APIs",
-        "DevOps"
-      ]
-    },
-    {
-      title: "Methodologies",
-      skills: [
-        "SOLID",
-        "Clean Code",
-        "MVC",
-        "SCRUM",
-        "RUP"
-      ]
-    },
-    {
-      title: "AI Tools",
-      skills: [
-        "Claude",
-        "Cursor",
-        "GitHub Copilot",
-        "Ollama",
-        "LM Studio"
+        "Azure DevOps"
       ]
     }
   ]
@@ -69,14 +47,16 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-16 border-t border-gray-200"
+      className="py-12 border-t border-gray-200"
     >
       <div className="max-w-6xl mx-auto px-6">
+
         <h2 className="section-title">
           Technical Skills
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
+
           {categories.map((category, index) => (
             <div
               key={index}
@@ -87,6 +67,7 @@ function Skills() {
               </h3>
 
               <div className="flex flex-wrap gap-2">
+
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
@@ -95,10 +76,14 @@ function Skills() {
                     {skill}
                   </span>
                 ))}
+
               </div>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="pt-40 pb-20 border-b border-gray-200">
+    <section className="pt-32 pb-16 border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-8">
 
         <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
