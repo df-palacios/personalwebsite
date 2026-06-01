@@ -2,44 +2,48 @@ function Education() {
   return (
     <section
       id="education"
-      className="py-20 border-t border-white/5"
+      className="py-16 border-t border-gray-200"
     >
-      <div className="max-w-5xl mx-auto px-6">
-        <h2 className="section-title">Education</h2>
+      <div className="max-w-6xl mx-auto px-6">
 
-        <div className="space-y-8">
-          <div>
-            <div className="flex flex-col md:flex-row md:justify-between gap-2 mb-2">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  Electronic Engineering
-                </h3>
+        <h2 className="section-title">
+          Education
+        </h2>
 
-                <p className="text-blue-400">
-                  Universidad del Valle
-                </p>
-              </div>
+        <div className="card mb-6">
+          <h3 className="text-xl font-semibold text-gray-900">
+            Electronic Engineering
+          </h3>
 
-              <span className="text-sm text-gray-500">
-                2024
-              </span>
-            </div>
-          </div>
+          <p className="text-blue-600">
+            Universidad del Valle
+          </p>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
-              Courses
-            </h3>
-
-            <div className="space-y-3 text-gray-400">
-              <p>Intermediate Excel — Comfenalco Valle</p>
-
-              <p>Blockchain and Cryptoassets — Chainlink Labs</p>
-
-              <p>Blockchain y Criptoactivos — UxTIC</p>
-            </div>
-          </div>
+          <p className="text-gray-500 mt-2">
+            Graduated 2024
+          </p>
         </div>
+
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          Courses & Certifications
+        </h2>
+
+        <div className="card">
+          <ul className="space-y-3 text-gray-700">
+            <li>
+              • Excel Intermedio — Comfenalco Valle (2026)
+            </li>
+
+            <li>
+              • Blockchain and Cryptoassets — Chainlink Labs (2024)
+            </li>
+
+            <li>
+              • Blockchain y Criptoactivos — UxTIC (2022)
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
   )

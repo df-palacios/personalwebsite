@@ -13,10 +13,9 @@ function Hero() {
                 QA Automation • Full-Stack Developer
               </p>
 
-              <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight text-gray-900">
+              <h1 className="text-4xl md:text-[2.8rem] font-bold mb-5 leading-tight text-gray-900">
                 Diego Fernando Palacios
               </h1>
-
               <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
                 Electronic engineer with experience in software testing,
                 Selenium automation, REST APIs, React development,

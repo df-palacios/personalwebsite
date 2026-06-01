@@ -1,30 +1,41 @@
 function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur border-b border-white/5 bg-[#0b0f19]/80">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span className="text-sm text-gray-400">
-          Diego Palacios
-        </span>
+    <header className="fixed top-6 left-0 right-0 z-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <nav className="bg-white/90 backdrop-blur-md border border-gray-200 shadow-sm rounded-full px-8 py-4">
+          <div className="flex justify-between items-center">
 
-        <div className="flex gap-6 text-sm text-gray-500">
-          <a href="#experience" className="hover:text-white transition">
-            Experience
-          </a>
+            <a
+              href="#"
+              className="font-semibold text-gray-900"
+            >
+              Diego Palacios
+            </a>
 
-          <a href="#skills" className="hover:text-white transition">
-            Skills
-          </a>
+            <div className="hidden md:flex gap-8 text-sm text-gray-600">
 
-          <a href="#education" className="hover:text-white transition">
-            Education
-          </a>
+              <a href="#experience" className="hover:text-blue-600 transition">
+                Experience
+              </a>
 
-          <a href="#contact" className="hover:text-white transition">
-            Contact
-          </a>
-        </div>
+              <a href="#skills" className="hover:text-blue-600 transition">
+                Skills
+              </a>
+
+              <a href="#education" className="hover:text-blue-600 transition">
+                Education
+              </a>
+
+              <a href="#contact" className="hover:text-blue-600 transition">
+                Contact
+              </a>
+
+            </div>
+
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   )
 }
 

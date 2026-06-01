@@ -2,79 +2,77 @@ function Contact() {
   return (
     <footer
       id="contact"
-      className="py-16 border-t border-gray-200 mt-20"
+      className="py-12 border-t border-gray-200 mt-8"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="flex flex-col gap-8 items-center">
 
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              Contact
-            </h2>
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Contact
+          </h2>
 
-            <p className="text-gray-600">
-              Available for QA Automation, Full-Stack and DevOps opportunities.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
 
             <a
               href="mailto:ing.diegopalacios@outlook.com"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm text-gray-700 shadow-sm hover:border-blue-300 hover:text-blue-600 transition"
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:shadow-md transition"
             >
               <img
                 src="/emailLogo.png"
-                alt="Email"
-                className="w-4 h-4 object-contain"
+                alt=""
+                className="w-5 h-5"
               />
-              Email
+              <span>Email</span>
             </a>
 
             <a
               href="https://github.com/df-palacios"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm text-gray-700 shadow-sm hover:border-blue-300 hover:text-blue-600 transition"
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:shadow-md transition"
             >
               <img
                 src="/githubLogo.png"
-                alt="GitHub"
-                className="w-4 h-4 object-contain"
+                alt=""
+                className="w-5 h-5"
               />
-              GitHub
+              <span>GitHub</span>
             </a>
 
             <a
               href="https://linkedin.com/in/dfpalacios"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm text-gray-700 shadow-sm hover:border-blue-300 hover:text-blue-600 transition"
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:shadow-md transition"
             >
               <img
                 src="/linkedinLogo.png"
-                alt="LinkedIn"
-                className="w-4 h-4 object-contain"
+                alt=""
+                className="w-5 h-5"
               />
-              LinkedIn
+              <span>LinkedIn</span>
             </a>
 
             <a
               href="https://wa.me/573137464587"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 border border-blue-200 text-sm text-blue-700 shadow-sm hover:bg-blue-100 transition"
+              className="flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-xl hover:shadow-md transition"
             >
               <img
                 src="/whatsappLogo.png"
-                alt="WhatsApp"
-                className="w-4 h-4 object-contain"
+                alt=""
+                className="w-5 h-5"
               />
-              WhatsApp
+              <span>WhatsApp</span>
             </a>
 
           </div>
+
+          <p className="text-gray-500 text-sm">
+            © 2026 Diego Fernando Palacios
+          </p>
 
         </div>
 
