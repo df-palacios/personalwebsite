@@ -1,52 +1,70 @@
+import { useTheme } from "../context/ThemeContext"
+
 function Education() {
-  return (
-    <section
-      id="education"
-      className="py-12 border-t border-gray-200"
-    >
-      <div className="max-w-6xl mx-auto px-6">
+const { darkMode } = useTheme()
 
-        <h2 className="section-title">
-          Education
-        </h2>
+return (
+<section
+id="education"
+className={`py-12 border-t ${
+        darkMode ? "border-slate-700" : "border-gray-200"
+      }`}
+> <div className="max-w-6xl mx-auto px-6">
 
-        <div className="card mb-6">
-          <h3 className="text-xl font-semibold text-gray-900">
-            Electronic Engineering
-          </h3>
+```
+    <h2 className={`section-title ${
+      darkMode ? "text-white" : "text-gray-900"
+    }`}>
+      Education
+    </h2>
 
-          <p className="text-blue-600">
-            Universidad del Valle
-          </p>
+    <div className={`card mb-6 ${
+      darkMode
+        ? "bg-slate-900 border-slate-700"
+        : "bg-white border-gray-200"
+    }`}>
+      <h3 className={`text-xl font-semibold ${
+        darkMode ? "text-white" : "text-gray-900"
+      }`}>
+        Electronic Engineering
+      </h3>
 
-          <p className="text-gray-500 mt-2">
-            Graduated 2024
-          </p>
-        </div>
+      <p className="text-blue-500">
+        Universidad del Valle
+      </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-          Courses & Certifications
-        </h2>
+      <p className={
+        darkMode ? "text-slate-400 mt-2" : "text-gray-500 mt-2"
+      }>
+        Graduated 2024
+      </p>
+    </div>
 
-        <div className="card">
-          <ul className="space-y-3 text-gray-700">
-            <li>
-              • Excel Intermedio — Comfenalco Valle (2026)
-            </li>
+    <h2 className={`text-2xl font-semibold mb-6 ${
+      darkMode ? "text-white" : "text-gray-900"
+    }`}>
+      Courses & Certifications
+    </h2>
 
-            <li>
-              • Blockchain and Cryptoassets — Chainlink Labs (2024)
-            </li>
+    <div className={`card ${
+      darkMode
+        ? "bg-slate-900 border-slate-700"
+        : "bg-white border-gray-200"
+    }`}>
+      <ul className={`space-y-3 ${
+        darkMode ? "text-slate-300" : "text-gray-700"
+      }`}>
+        <li>• Excel Intermedio — Comfenalco Valle (2026)</li>
+        <li>• Blockchain and Cryptoassets — Chainlink Labs (2024)</li>
+        <li>• Blockchain y Criptoactivos — UxTIC (2022)</li>
+      </ul>
+    </div>
 
-            <li>
-              • Blockchain y Criptoactivos — UxTIC (2022)
-            </li>
-          </ul>
-        </div>
+  </div>
+</section>
 
-      </div>
-    </section>
-  )
+
+)
 }
 
 export default Education
