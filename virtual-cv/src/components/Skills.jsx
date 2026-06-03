@@ -60,7 +60,7 @@ className={`py-12 border-t ${
       }`}
 > <div className="max-w-6xl mx-auto px-6">
 
-```
+
     <h2 className={`section-title ${
       darkMode ? "text-white" : "text-gray-900"
     }`}>

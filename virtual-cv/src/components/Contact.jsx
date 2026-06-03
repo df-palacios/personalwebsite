@@ -11,7 +11,6 @@ className={`py-12 mt-8 border-t ${
       }`}
 > <div className="max-w-6xl mx-auto px-6">
 
-```
     <div className="flex flex-col gap-8 items-center">
 
       <h2 className={`text-2xl font-semibold ${
