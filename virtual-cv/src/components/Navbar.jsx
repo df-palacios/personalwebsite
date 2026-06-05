@@ -1,9 +1,12 @@
 import { useLanguage } from "../context/LanguageContext"
 import { useTheme } from "../context/ThemeContext"
+import { translations } from "../translations"
 
 function Navbar() {
   const { language, toggleLanguage } = useLanguage()
   const { darkMode, toggleTheme } = useTheme()
+
+  const t = translations[language]
 
   return (
     <header
@@ -32,7 +35,7 @@ function Navbar() {
                 darkMode ? "text-gray-400" : "text-gray-500"
               }`}
             >
-              QA Automation Engineer • Full-Stack Developer
+              {t.navbarSubtitle}
             </div>
           </div>
 
@@ -47,9 +50,7 @@ function Navbar() {
                   : "text-gray-600 hover:text-blue-600"
               }`}
             >
-              {language === "en"
-                ? "Experience"
-                : "Experiencia"}
+              {t.experience}
             </a>
 
             <a
@@ -60,9 +61,7 @@ function Navbar() {
                   : "text-gray-600 hover:text-blue-600"
               }`}
             >
-              {language === "en"
-                ? "Skills"
-                : "Habilidades"}
+              {t.skills}
             </a>
 
             <a
@@ -73,9 +72,7 @@ function Navbar() {
                   : "text-gray-600 hover:text-blue-600"
               }`}
             >
-              {language === "en"
-                ? "Education"
-                : "Educación"}
+              {t.education}
             </a>
 
             <a
@@ -86,9 +83,7 @@ function Navbar() {
                   : "text-gray-600 hover:text-blue-600"
               }`}
             >
-              {language === "en"
-                ? "Contact"
-                : "Contacto"}
+              {t.contact}
             </a>
 
             {/* LANGUAGE BUTTON */}
@@ -140,9 +135,7 @@ function Navbar() {
               rel="noreferrer"
               className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
             >
-              {language === "en"
-                ? "Resume PDF"
-                : "CV PDF"}
+              {t.resumePdf}
             </a>
 
           </div>

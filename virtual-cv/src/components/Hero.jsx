@@ -1,8 +1,10 @@
 import { useLanguage } from "../context/LanguageContext"
 import { useTheme } from "../context/ThemeContext"
+import { translations } from "../translations"
 
 function Hero() {
   const { language } = useLanguage()
+  const t = translations[language]
   const { darkMode } = useTheme()
 
   return (
@@ -22,7 +24,7 @@ function Hero() {
             <div>
 
               <p className="text-blue-500 uppercase tracking-[0.2em] text-sm mb-4">
-                QA AUTOMATION ENGINEER • FULL-STACK DEVELOPER
+                {t.heroTitle}
               </p>
 
               <h1
@@ -42,9 +44,7 @@ function Hero() {
                     : "text-gray-600"
                 }`}
               >
-                {language === "en"
-                  ? `Electronic Engineer with experience in QA Automation, Software Testing and Full-Stack Development. Skilled in Selenium, Playwright, Serenity BDD, Karate DSL, REST APIs, React, Node.js and data validation under Agile methodologies.`
-                  : `Ingeniero Electrónico con experiencia en Automatización QA, Testing de Software y Desarrollo Full-Stack. Con conocimientos en Selenium, Playwright, Serenity BDD, Karate DSL, APIs REST, React, Node.js y validación de datos bajo metodologías ágiles.`}
+                {t.heroDescription}
               </p>
 
             </div>
