@@ -20,7 +20,6 @@ function Navbar() {
 
         <nav className="h-20 flex justify-between items-center">
 
-          {/* LEFT */}
           <div>
             <div
               className={`font-semibold ${
@@ -39,7 +38,6 @@ function Navbar() {
             </div>
           </div>
 
-          {/* RIGHT */}
           <div className="hidden md:flex items-center gap-6">
 
             <a
@@ -86,7 +84,6 @@ function Navbar() {
               {t.contact}
             </a>
 
-            {/* LANGUAGE BUTTON */}
             <button
               onClick={toggleLanguage}
               className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition ${
@@ -116,7 +113,6 @@ function Navbar() {
               </span>
             </button>
 
-            {/* THEME BUTTON */}
             <button
               onClick={toggleTheme}
               className={`w-10 h-10 rounded-lg border transition ${
@@ -128,11 +124,17 @@ function Navbar() {
               {darkMode ? "☀️" : "🌙"}
             </button>
 
-            {/* PDF */}
             <a
-              href="/CV_Diego_Palacios.pdf"
-              target="_blank"
-              rel="noreferrer"
+              href={
+                language === "en"
+                  ? "/CV_Diego_Palacios_EN.pdf"
+                  : "/CV_Diego_Palacios_ES.pdf"
+              }
+              download={
+                language === "en"
+                  ? "Diego_Palacios_Resume.pdf"
+                  : "Diego_Palacios_CV.pdf"
+              }
               className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
             >
               {t.resumePdf}
