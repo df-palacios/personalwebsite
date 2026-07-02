@@ -73,6 +73,8 @@ function Navbar() {
               {t.education}
             </a>
 
+            <a href="#projects" className={`transition ${darkMode ? "text-gray-300 hover:text-blue-400":"text-gray-600 hover:text-blue-600"}`}>Projects</a>
+
             <a
               href="#contact"
               className={`transition ${

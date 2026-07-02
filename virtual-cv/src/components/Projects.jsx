@@ -1,43 +1,5 @@
-const projects = [
-  {
-    title: "Tourism QA Automation",
-    description:
-      "Automated testing and XML/API validation system using Selenium and Power BI.",
-  },
-  {
-    title: "ISP Christmas Raffle System",
-    description:
-      "Internal full-stack platform built with React, Laravel and MySQL.",
-  },
-  {
-    title: "Web3 Applications",
-    description:
-      "React and Node.js applications integrated with Solidity smart contracts.",
-  },
-]
-
-function Projects() {
-  return (
-    <section id="projects" className="py-28">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="section-title">Projects</h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div key={index} className="card">
-              <h3 className="text-xl font-semibold mb-4">
-                {project.title}
-              </h3>
-
-              <p className="text-gray-400 leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default Projects
+import {useRef,useState} from "react";
+import { useLanguage } from "../context/LanguageContext";
+const data={es:{title:"Proyectos",btn:"Lanzar proyecto",projects:[{name:"Rifa Virtual",image:"/rifa-preview.png",video:"/rifaVideo.mp4",desc:"Sistema web de rifas desarrollado en React, Laravel y MySQL. Se integrará con este sitio para ejecutar sorteos en línea.",tech:"React • Laravel • MySQL"}]},en:{title:"Projects",btn:"Launch Project",projects:[{name:"Virtual Raffle",image:"/rifa-preview.png",video:"/rifaVideo.mp4",desc:"Web raffle platform built with React, Laravel and MySQL. It will be integrated into this website to run live raffles.",tech:"React • Laravel • MySQL"}]}};
+function Card({p,btn}){const v=useRef();const t=useRef();const[s,setS]=useState(false);return <div className="rounded-2xl border overflow-hidden bg-slate-900/20"><div className="relative aspect-video" onMouseEnter={()=>{t.current=setTimeout(()=>{if(v.current){setS(true);v.current.currentTime=0;v.current.play().catch(()=>{});}},200)}} onMouseLeave={()=>{clearTimeout(t.current);setS(false);if(v.current){v.current.pause();v.current.currentTime=0;}}}><img src={p.image} className={`absolute inset-0 w-full h-full object-cover transition-opacity ${s?"opacity-0":"opacity-100"}`}/><video ref={v} src={p.video} preload="metadata" muted loop autoPlay={false} playsInline disablePictureInPicture controls={false} controlsList="nodownload nofullscreen noremoteplayback" tabIndex={-1} className={`absolute inset-0 w-full h-full object-cover transition-opacity ${s?"opacity-100":"opacity-0"}`}/></div><div className="p-5"><h3 className="text-xl font-bold mb-3">{p.name}</h3><p>{p.desc}</p><p className="font-semibold mb-5">{p.tech}</p><a href="/raffle" className="inline-block px-5 py-3 bg-blue-600 text-white rounded-lg">{btn}</a></div></div>}
+export default function Projects(){const {language}=useLanguage();const t=data[language];return <section id="projects" className="py-24"><div className="max-w-6xl mx-auto px-6"><h2 className="text-4xl font-bold mb-10">{t.title}</h2><div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">{t.projects.map((x,i)=><Card key={i} p={x} btn={t.btn}/>)}</div></div></section>}
