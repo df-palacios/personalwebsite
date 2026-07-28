@@ -12,13 +12,13 @@ function Education() {
   return (
     <section
       id="education"
-      className={`py-12 border-t ${
+      className={`py-8 md:py-12 border-t ${
         darkMode
           ? "border-slate-700"
           : "border-gray-200"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <h2
           className={`section-title ${
@@ -31,14 +31,14 @@ function Education() {
         </h2>
 
         <div
-          className={`card mb-6 ${
+          className={`card mb-4 md:mb-6 ${
             darkMode
               ? "bg-slate-900 border-slate-700"
               : "bg-white border-gray-200"
           }`}
         >
           <h3
-            className={`text-xl font-semibold ${
+            className={`text-lg md:text-xl font-semibold ${
               darkMode
                 ? "text-white"
                 : "text-gray-900"
@@ -47,15 +47,15 @@ function Education() {
             {t.electronicEngineering}
           </h3>
 
-          <p className="text-blue-500">
+          <p className="text-blue-500 text-sm md:text-base">
             Universidad del Valle
           </p>
 
           <p
             className={
               darkMode
-                ? "text-slate-400 mt-2"
-                : "text-gray-500 mt-2"
+                ? "text-slate-400 mt-2 text-sm md:text-base"
+                : "text-gray-500 mt-2 text-sm md:text-base"
             }
           >
             {t.graduated}
@@ -63,7 +63,7 @@ function Education() {
         </div>
 
         <h2
-          className={`text-2xl font-semibold mb-6 ${
+          className={`text-xl md:text-2xl font-semibold mb-4 md:mb-6 ${
             darkMode
               ? "text-white"
               : "text-gray-900"
@@ -80,7 +80,7 @@ function Education() {
           }`}
         >
           <ul
-            className={`space-y-3 ${
+            className={`space-y-3 text-sm md:text-base ${
               darkMode
                 ? "text-slate-300"
                 : "text-gray-700"

@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { Menu, X, Sun, Moon } from "lucide-react"
 import { useLanguage } from "../context/LanguageContext"
 import { useTheme } from "../context/ThemeContext"
 import { translations } from "../translations"
@@ -5,24 +7,35 @@ import { translations } from "../translations"
 function Navbar() {
   const { language, toggleLanguage } = useLanguage()
   const { darkMode, toggleTheme } = useTheme()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const t = translations[language]
 
+  const closeMenu = () => setMenuOpen(false)
+
+  const navLinks = [
+    { href: "#experience", label: t.experience },
+    { href: "#skills", label: t.skills },
+    { href: "#education", label: t.education },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: t.contact },
+  ]
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${
         darkMode
-          ? "bg-slate-900/95 border-slate-700"
-          : "bg-white/95 border-gray-200"
+          ? "bg-slate-900 md:bg-slate-900/95 md:backdrop-blur-md border-slate-700"
+          : "bg-white md:bg-white/95 md:backdrop-blur-md border-gray-200"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <nav className="h-20 flex justify-between items-center">
+        <nav className="h-14 md:h-20 flex justify-between items-center">
 
-          <div>
+          <div className="min-w-0">
             <div
-              className={`font-semibold ${
+              className={`font-semibold text-sm md:text-base truncate ${
                 darkMode ? "text-white" : "text-gray-900"
               }`}
             >
@@ -30,7 +43,7 @@ function Navbar() {
             </div>
 
             <div
-              className={`text-xs ${
+              className={`hidden w360:block text-[10px] md:text-xs truncate ${
                 darkMode ? "text-gray-400" : "text-gray-500"
               }`}
             >
@@ -117,13 +130,14 @@ function Navbar() {
 
             <button
               onClick={toggleTheme}
-              className={`w-10 h-10 rounded-lg border transition ${
+              aria-label="Toggle dark mode"
+              className={`w-10 h-10 flex items-center justify-center rounded-lg border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-600 hover:bg-slate-700"
-                  : "bg-white border-gray-200 hover:bg-gray-50"
+                  ? "bg-slate-800 border-slate-600 hover:bg-slate-700 text-yellow-300"
+                  : "bg-white border-gray-200 hover:bg-gray-50 text-slate-700"
               }`}
             >
-              {darkMode ? "☀️" : "🌙"}
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
             <a
@@ -144,8 +158,120 @@ function Navbar() {
 
           </div>
 
+          {/* Controles móviles: idioma + modo oscuro quedan siempre visibles junto al menú */}
+          <div className="flex md:hidden items-center gap-1.5">
+
+            <button
+              onClick={toggleLanguage}
+              aria-label="Toggle language"
+              className={`flex items-center justify-center gap-1 h-9 px-2 rounded-md border transition ${
+                darkMode
+                  ? "bg-slate-800 border-slate-600"
+                  : "bg-white border-gray-300"
+              }`}
+            >
+              <img
+                src={
+                  language === "en"
+                    ? "/usaFlag.png"
+                    : "/spainFlag.png"
+                }
+                alt="Language"
+                className="w-4 h-4 rounded-[2px]"
+              />
+
+              <span
+                className={`text-[11px] font-semibold leading-none ${
+                  darkMode ? "text-gray-200" : "text-gray-700"
+                }`}
+              >
+                {language === "en" ? "EN" : "ES"}
+              </span>
+            </button>
+
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle dark mode"
+              className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
+                darkMode
+                  ? "bg-slate-800 border-slate-600 text-yellow-300"
+                  : "bg-white border-gray-300 text-slate-700"
+              }`}
+            >
+              {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setMenuOpen((prev) => !prev)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
+                darkMode
+                  ? "bg-slate-800 border-slate-600 text-white"
+                  : "bg-white border-gray-300 text-gray-900"
+              }`}
+            >
+              {menuOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
+
+          </div>
+
         </nav>
 
+      </div>
+
+      {/* Mobile menu panel: solo navegación + descarga de CV */}
+      <div
+        className={`md:hidden overflow-hidden transition-[max-height] duration-200 ease-out border-t ${
+          menuOpen ? "max-h-96" : "max-h-0"
+        } ${
+          darkMode
+            ? "bg-slate-900 border-slate-700"
+            : "bg-white border-gray-200"
+        }`}
+      >
+        <div className="px-4 py-3 flex flex-col">
+
+          {navLinks.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className={`py-3 text-[15px] font-medium ${
+                i !== 0
+                  ? darkMode
+                    ? "border-t border-slate-800"
+                    : "border-t border-gray-100"
+                  : ""
+              } ${
+                darkMode
+                  ? "text-gray-200 active:bg-slate-800"
+                  : "text-gray-700 active:bg-gray-100"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+
+          <a
+            href={
+              language === "en"
+                ? "/CV_Diego_Palacios_EN.pdf"
+                : "/CV_Diego_Palacios_ES.pdf"
+            }
+            download={
+              language === "en"
+                ? "Diego_Palacios_Resume.pdf"
+                : "Diego_Palacios_CV.pdf"
+            }
+            onClick={closeMenu}
+            className="mt-3 mb-2 text-center py-3 rounded-md bg-blue-600 text-white font-semibold text-sm"
+          >
+            {t.resumePdf}
+          </a>
+
+        </div>
       </div>
     </header>
   )

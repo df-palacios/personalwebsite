@@ -29,10 +29,10 @@ company: "Carvajal Tecnología y Servicios",
 return (
 <section
 id="experience"
-className={`py-12 border-t ${
+className={`py-8 md:py-12 border-t ${
         darkMode ? "border-slate-700" : "border-gray-200"
       }`}
-> <div className="max-w-6xl mx-auto px-6">
+> <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 
     <h2
@@ -43,7 +43,7 @@ className={`py-12 border-t ${
       {t.experience}
     </h2>
 
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4 md:gap-6">
 
       {jobs.map((job, index) => (
         <div
@@ -54,26 +54,26 @@ className={`py-12 border-t ${
               : "bg-white border-gray-200"
           }`}
         >
-          <div className="flex flex-col md:flex-row md:justify-between gap-4">
+          <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-4">
 
             <div>
               <h3
-                className={`text-xl font-semibold ${
+                className={`text-lg md:text-xl font-semibold ${
                   darkMode ? "text-white" : "text-gray-900"
                 }`}
               >
                 {job.title}
               </h3>
 
-              <p className="text-blue-500">
+              <p className="text-blue-500 text-sm md:text-base">
                 {job.company}
               </p>
             </div>
 
             <span
-              className={
+              className={`text-sm md:text-base ${
                 darkMode ? "text-slate-400" : "text-gray-500"
-              }
+              }`}
             >
               {job.period}
             </span>
@@ -81,7 +81,7 @@ className={`py-12 border-t ${
           </div>
 
           <ul
-            className={`mt-5 space-y-2 ${
+            className={`mt-3 md:mt-5 space-y-2 text-sm md:text-base ${
               darkMode ? "text-slate-300" : "text-gray-700"
             }`}
           >

@@ -64,13 +64,13 @@ function Skills() {
   return (
     <section
       id="skills"
-      className={`py-12 border-t ${
+      className={`py-8 md:py-12 border-t ${
         darkMode
           ? "border-slate-700"
           : "border-gray-200"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <h2
           className={`section-title ${
@@ -82,7 +82,7 @@ function Skills() {
           {t.skills}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-5">
 
           {categories.map((category, index) => (
             <div
