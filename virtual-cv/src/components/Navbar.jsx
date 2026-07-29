@@ -17,7 +17,7 @@ function Navbar() {
     { href: "#experience", label: t.experience },
     { href: "#skills", label: t.skills },
     { href: "#education", label: t.education },
-    { href: "#projects", label: "Projects" },
+    { href: "#projects", label: t.projects },
     { href: "#contact", label: t.contact },
   ]
 
@@ -26,39 +26,39 @@ function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${
         darkMode
           ? "bg-slate-900 md:bg-slate-900/95 md:backdrop-blur-md border-slate-700"
-          : "bg-white md:bg-white/95 md:backdrop-blur-md border-gray-200"
+          : "bg-white md:bg-white/95 md:backdrop-blur-md border-slate-200"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <nav className="h-14 md:h-20 flex justify-between items-center">
 
-          <div className="min-w-0">
+          <div className="min-w-0 shrink">
             <div
               className={`font-semibold text-sm md:text-base truncate ${
-                darkMode ? "text-white" : "text-gray-900"
+                darkMode ? "text-white" : "text-slate-900"
               }`}
             >
               Diego Palacios
             </div>
 
             <div
-              className={`hidden w360:block text-[10px] md:text-xs truncate ${
-                darkMode ? "text-gray-400" : "text-gray-500"
+              className={`hidden w360:block lg:hidden xl:block text-[10px] md:text-xs whitespace-nowrap truncate ${
+                darkMode ? "text-slate-400" : "text-slate-500"
               }`}
             >
               {t.navbarSubtitle}
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex shrink-0 items-center gap-4 xl:gap-5">
 
             <a
               href="#experience"
-              className={`transition ${
+              className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
               }`}
             >
               {t.experience}
@@ -66,10 +66,10 @@ function Navbar() {
 
             <a
               href="#skills"
-              className={`transition ${
+              className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
               }`}
             >
               {t.skills}
@@ -77,23 +77,32 @@ function Navbar() {
 
             <a
               href="#education"
-              className={`transition ${
+              className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
               }`}
             >
               {t.education}
             </a>
 
-            <a href="#projects" className={`transition ${darkMode ? "text-gray-300 hover:text-blue-400":"text-gray-600 hover:text-blue-600"}`}>Projects</a>
+            <a
+              href="#projects"
+              className={`text-sm whitespace-nowrap transition ${
+                darkMode
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
+              }`}
+            >
+              {t.projects}
+            </a>
 
             <a
               href="#contact"
-              className={`transition ${
+              className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
               }`}
             >
               {t.contact}
@@ -101,10 +110,10 @@ function Navbar() {
 
             <button
               onClick={toggleLanguage}
-              className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition ${
+              className={`inline-flex h-10 shrink-0 items-center gap-2 whitespace-nowrap px-3 rounded-lg border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-600 hover:bg-slate-700"
-                  : "bg-white border-gray-200 hover:bg-gray-50"
+                  ? "bg-slate-800 border-slate-700 hover:bg-slate-700"
+                  : "bg-white border-slate-300 hover:bg-slate-50"
               }`}
             >
               <img
@@ -120,8 +129,8 @@ function Navbar() {
               <span
                 className={`text-sm ${
                   darkMode
-                    ? "text-gray-200"
-                    : "text-gray-700"
+                    ? "text-slate-200"
+                    : "text-slate-700"
                 }`}
               >
                 {language === "en" ? "EN" : "ES"}
@@ -131,10 +140,10 @@ function Navbar() {
             <button
               onClick={toggleTheme}
               aria-label="Toggle dark mode"
-              className={`w-10 h-10 flex items-center justify-center rounded-lg border transition ${
+              className={`inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-lg border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-600 hover:bg-slate-700 text-yellow-300"
-                  : "bg-white border-gray-200 hover:bg-gray-50 text-slate-700"
+                  ? "bg-slate-800 border-slate-700 hover:bg-slate-700 text-amber-300"
+                  : "bg-white border-slate-300 hover:bg-slate-50 text-slate-700"
               }`}
             >
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
@@ -151,7 +160,7 @@ function Navbar() {
                   ? "Diego_Palacios_Resume.pdf"
                   : "Diego_Palacios_CV.pdf"
               }
-              className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+              className="inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-lg bg-blue-600 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
             >
               {t.resumePdf}
             </a>
@@ -159,7 +168,7 @@ function Navbar() {
           </div>
 
           {/* Controles móviles: idioma + modo oscuro quedan siempre visibles junto al menú */}
-          <div className="flex md:hidden items-center gap-1.5">
+          <div className="flex lg:hidden items-center gap-1.5">
 
             <button
               onClick={toggleLanguage}
@@ -167,7 +176,7 @@ function Navbar() {
               className={`flex items-center justify-center gap-1 h-9 px-2 rounded-md border transition ${
                 darkMode
                   ? "bg-slate-800 border-slate-600"
-                  : "bg-white border-gray-300"
+                  : "bg-white border-slate-300"
               }`}
             >
               <img
@@ -182,7 +191,7 @@ function Navbar() {
 
               <span
                 className={`text-[11px] font-semibold leading-none ${
-                  darkMode ? "text-gray-200" : "text-gray-700"
+                  darkMode ? "text-slate-200" : "text-slate-700"
                 }`}
               >
                 {language === "en" ? "EN" : "ES"}
@@ -195,7 +204,7 @@ function Navbar() {
               className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
                 darkMode
                   ? "bg-slate-800 border-slate-600 text-yellow-300"
-                  : "bg-white border-gray-300 text-slate-700"
+                  : "bg-white border-slate-300 text-slate-700"
               }`}
             >
               {darkMode ? <Sun size={16} /> : <Moon size={16} />}
@@ -209,7 +218,7 @@ function Navbar() {
               className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
                 darkMode
                   ? "bg-slate-800 border-slate-600 text-white"
-                  : "bg-white border-gray-300 text-gray-900"
+                  : "bg-white border-slate-300 text-slate-900"
               }`}
             >
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -223,12 +232,12 @@ function Navbar() {
 
       {/* Mobile menu panel: solo navegación + descarga de CV */}
       <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-200 ease-out border-t ${
+        className={`lg:hidden overflow-hidden transition-[max-height] duration-200 ease-out border-t ${
           menuOpen ? "max-h-96" : "max-h-0"
         } ${
           darkMode
             ? "bg-slate-900 border-slate-700"
-            : "bg-white border-gray-200"
+            : "bg-white border-slate-200"
         }`}
       >
         <div className="px-4 py-3 flex flex-col">
@@ -242,12 +251,12 @@ function Navbar() {
                 i !== 0
                   ? darkMode
                     ? "border-t border-slate-800"
-                    : "border-t border-gray-100"
+                    : "border-t border-slate-100"
                   : ""
               } ${
                 darkMode
-                  ? "text-gray-200 active:bg-slate-800"
-                  : "text-gray-700 active:bg-gray-100"
+                  ? "text-slate-200 active:bg-slate-800"
+                  : "text-slate-700 active:bg-slate-100"
               }`}
             >
               {link.label}

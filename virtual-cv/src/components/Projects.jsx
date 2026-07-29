@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
+import { translations } from "../translations";
 
 const data = {
   es: {
-    title: "Proyectos",
     btn: "Lanzar proyecto",
     projects: [
       {
@@ -16,7 +17,6 @@ const data = {
     ],
   },
   en: {
-    title: "Projects",
     btn: "Launch Project",
     projects: [
       {
@@ -30,15 +30,19 @@ const data = {
   },
 };
 
-function Card(props) {
-  const p = props.p;
-  const btn = props.btn;
+function Card({ p, btn, darkMode }) {
   const v = useRef();
   const t = useRef();
   const [s, setS] = useState(false);
 
   return (
-    <div className="rounded-2xl border overflow-hidden bg-slate-900/20">
+    <div
+      className={`flex flex-col rounded-2xl border overflow-hidden transition-all duration-300 md:hover:-translate-y-1 md:hover:shadow-lg ${
+        darkMode
+          ? "bg-slate-800 border-slate-700"
+          : "bg-white border-slate-200 shadow-sm"
+      }`}
+    >
       <div
         className="relative aspect-video"
         onMouseEnter={() => {
@@ -85,21 +89,37 @@ function Card(props) {
         />
       </div>
 
-      <div className="p-4 md:p-5">
-        <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{p.name}</h3>
+      <div className="flex flex-1 flex-col p-4 md:p-6">
+        <h3
+          className={`text-lg md:text-xl font-semibold mb-2 md:mb-3 ${
+            darkMode ? "text-white" : "text-slate-900"
+          }`}
+        >
+          {p.name}
+        </h3>
 
-        <p className="text-sm md:text-base">{p.desc}</p>
+        <p
+          className={`text-sm md:text-base leading-relaxed ${
+            darkMode ? "text-slate-300" : "text-slate-600"
+          }`}
+        >
+          {p.desc}
+        </p>
 
-        <p className="font-semibold mt-2 mb-4 md:mb-5 text-sm md:text-base">{p.tech}</p>
+        <p
+          className={`text-sm font-medium mt-3 mb-4 md:mb-6 ${
+            darkMode ? "text-blue-400" : "text-blue-600"
+          }`}
+        >
+          {p.tech}
+        </p>
 
-        {React.createElement(
-          "a",
-          {
-            href: "/proyectos/rifa",
-            className: "block w-full text-center px-5 py-3 bg-blue-600 text-white rounded-lg",
-          },
-          btn
-        )}
+        <a
+          href="/proyectos/rifa"
+          className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
+        >
+          {btn}
+        </a>
       </div>
     </div>
   );
@@ -107,16 +127,30 @@ function Card(props) {
 
 export default function Projects() {
   const { language } = useLanguage();
-  const t = data[language];
+  const { darkMode } = useTheme();
+
+  const d = data[language];
+  const t = translations[language];
 
   return (
-    <section id="projects" className="py-12 md:py-24">
+    <section
+      id="projects"
+      className={`py-8 md:py-16 border-t ${
+        darkMode ? "border-slate-700" : "border-slate-200"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-10">{t.title}</h2>
+        <h2
+          className={`section-title ${
+            darkMode ? "text-white" : "text-slate-900"
+          }`}
+        >
+          {t.projects}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
-          {t.projects.map((x, i) => (
-            <Card key={i} p={x} btn={t.btn} />
+          {d.projects.map((x, i) => (
+            <Card key={i} p={x} btn={d.btn} darkMode={darkMode} />
           ))}
         </div>
       </div>
