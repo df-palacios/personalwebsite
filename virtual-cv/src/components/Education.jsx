@@ -12,50 +12,50 @@ function Education() {
   return (
     <section
       id="education"
-      className={`py-12 border-t ${
+      className={`py-8 md:py-16 border-t ${
         darkMode
           ? "border-slate-700"
-          : "border-gray-200"
+          : "border-slate-200"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <h2
           className={`section-title ${
             darkMode
               ? "text-white"
-              : "text-gray-900"
+              : "text-slate-900"
           }`}
         >
           {t.education}
         </h2>
 
         <div
-          className={`card mb-6 ${
+          className={`card mb-4 md:mb-6 ${
             darkMode
               ? "bg-slate-900 border-slate-700"
-              : "bg-white border-gray-200"
+              : "bg-white border-slate-200"
           }`}
         >
           <h3
-            className={`text-xl font-semibold ${
+            className={`text-lg md:text-xl font-semibold ${
               darkMode
                 ? "text-white"
-                : "text-gray-900"
+                : "text-slate-900"
             }`}
           >
             {t.electronicEngineering}
           </h3>
 
-          <p className="text-blue-500">
+          <p className={`text-sm md:text-base font-medium ${darkMode ? "text-blue-400" : "text-blue-600"}`}>
             Universidad del Valle
           </p>
 
           <p
             className={
               darkMode
-                ? "text-slate-400 mt-2"
-                : "text-gray-500 mt-2"
+                ? "text-slate-400 mt-2 text-sm md:text-base"
+                : "text-slate-500 mt-2 text-sm md:text-base"
             }
           >
             {t.graduated}
@@ -63,10 +63,10 @@ function Education() {
         </div>
 
         <h2
-          className={`text-2xl font-semibold mb-6 ${
+          className={`text-xl md:text-2xl font-semibold mb-4 md:mb-6 ${
             darkMode
               ? "text-white"
-              : "text-gray-900"
+              : "text-slate-900"
           }`}
         >
           {t.certifications}
@@ -76,14 +76,14 @@ function Education() {
           className={`card ${
             darkMode
               ? "bg-slate-900 border-slate-700"
-              : "bg-white border-gray-200"
+              : "bg-white border-slate-200"
           }`}
         >
           <ul
-            className={`space-y-3 ${
+            className={`space-y-3 text-sm md:text-base ${
               darkMode
                 ? "text-slate-300"
-                : "text-gray-700"
+                : "text-slate-600"
             }`}
           >
             <li>• Excel Intermedio — Comfenalco Valle (2026)</li>
