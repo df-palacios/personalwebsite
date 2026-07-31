@@ -3,6 +3,7 @@ import { Menu, X, Sun, Moon } from "lucide-react"
 import { useLanguage } from "../context/LanguageContext"
 import { useTheme } from "../context/ThemeContext"
 import { translations } from "../translations"
+import { cue, CUES } from "../lib/sound"
 
 function Navbar() {
   const { language, toggleLanguage } = useLanguage()
@@ -12,6 +13,22 @@ function Navbar() {
   const t = translations[language]
 
   const closeMenu = () => setMenuOpen(false)
+
+  // Envolvemos los toggles para acompanarlos de su cue, sin alterar su logica.
+  const handleToggleLanguage = () => {
+    cue(CUES.toggleLanguage)
+    toggleLanguage()
+  }
+
+  const handleToggleTheme = () => {
+    cue(CUES.toggleTheme)
+    toggleTheme()
+  }
+
+  const handleToggleMenu = () => {
+    cue(CUES.menu)
+    setMenuOpen((prev) => !prev)
+  }
 
   const navLinks = [
     { href: "#experience", label: t.experience },
@@ -55,6 +72,7 @@ function Navbar() {
 
             <a
               href="#experience"
+              onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
                   ? "text-slate-300 hover:text-blue-400"
@@ -66,6 +84,7 @@ function Navbar() {
 
             <a
               href="#skills"
+              onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
                   ? "text-slate-300 hover:text-blue-400"
@@ -77,6 +96,7 @@ function Navbar() {
 
             <a
               href="#education"
+              onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
                   ? "text-slate-300 hover:text-blue-400"
@@ -88,6 +108,7 @@ function Navbar() {
 
             <a
               href="#projects"
+              onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
                   ? "text-slate-300 hover:text-blue-400"
@@ -99,6 +120,7 @@ function Navbar() {
 
             <a
               href="#contact"
+              onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
                   ? "text-slate-300 hover:text-blue-400"
@@ -109,7 +131,7 @@ function Navbar() {
             </a>
 
             <button
-              onClick={toggleLanguage}
+              onClick={handleToggleLanguage}
               className={`inline-flex h-10 shrink-0 items-center gap-2 whitespace-nowrap px-3 rounded-lg border transition ${
                 darkMode
                   ? "bg-slate-800 border-slate-700 hover:bg-slate-700"
@@ -138,7 +160,7 @@ function Navbar() {
             </button>
 
             <button
-              onClick={toggleTheme}
+              onClick={handleToggleTheme}
               aria-label="Toggle dark mode"
               className={`inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-lg border transition ${
                 darkMode
@@ -160,6 +182,9 @@ function Navbar() {
                   ? "Diego_Palacios_Resume.pdf"
                   : "Diego_Palacios_CV.pdf"
               }
+              data-cuelume-press
+              data-cuelume-release
+              onClick={() => cue(CUES.download)}
               className="inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-lg bg-blue-600 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
             >
               {t.resumePdf}
@@ -171,7 +196,7 @@ function Navbar() {
           <div className="flex lg:hidden items-center gap-1.5">
 
             <button
-              onClick={toggleLanguage}
+              onClick={handleToggleLanguage}
               aria-label="Toggle language"
               className={`flex items-center justify-center gap-1 h-9 px-2 rounded-md border transition ${
                 darkMode
@@ -199,7 +224,7 @@ function Navbar() {
             </button>
 
             <button
-              onClick={toggleTheme}
+              onClick={handleToggleTheme}
               aria-label="Toggle dark mode"
               className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
                 darkMode
@@ -212,7 +237,7 @@ function Navbar() {
 
             <button
               type="button"
-              onClick={() => setMenuOpen((prev) => !prev)}
+              onClick={handleToggleMenu}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               className={`flex items-center justify-center w-9 h-9 rounded-md border transition ${
@@ -246,7 +271,10 @@ function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              onClick={closeMenu}
+              onClick={() => {
+                cue(CUES.navClick)
+                closeMenu()
+              }}
               className={`py-3 text-[15px] font-medium ${
                 i !== 0
                   ? darkMode
@@ -274,7 +302,10 @@ function Navbar() {
                 ? "Diego_Palacios_Resume.pdf"
                 : "Diego_Palacios_CV.pdf"
             }
-            onClick={closeMenu}
+            onClick={() => {
+              cue(CUES.download)
+              closeMenu()
+            }}
             className="mt-3 mb-2 text-center py-3 rounded-md bg-blue-600 text-white font-semibold text-sm"
           >
             {t.resumePdf}

@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+import { initSound } from "./lib/sound"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Experience from "./components/Experience"
@@ -7,6 +9,11 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 
 function App() {
+  // Conecta los atributos data-cuelume-* una sola vez.
+  useEffect(() => {
+    initSound()
+  }, [])
+
   return (
     <div
       className="

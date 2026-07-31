@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import { translations } from "../translations";
+import { cue, CUES } from "../lib/sound";
+import { RIFA_URL } from "../config/links";
 
 const data = {
   es: {
@@ -11,8 +13,8 @@ const data = {
         name: "Rifa Virtual",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
-        desc: "Sistema web de rifas desarrollado en React, Laravel y MySQL. Se integrará con este sitio para ejecutar sorteos en línea.",
-        tech: "React • Laravel • MySQL",
+        desc: "Aplicación de sorteos desarrollada para Redes Tevesat SAS. SPA en React con ruleta interactiva, carrusel de premios y sonido sintetizado con Web Audio API. Backend en Laravel con API REST y Eloquent sobre MySQL: gestiona clientes, premios y validación de participación.",
+        tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • API REST",
       },
     ],
   },
@@ -23,8 +25,8 @@ const data = {
         name: "Virtual Raffle",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
-        desc: "Web raffle platform built with React, Laravel and MySQL. It will be integrated into this website to run live raffles.",
-        tech: "React • Laravel • MySQL",
+        desc: "Raffle application built for Redes Tevesat SAS. React SPA with an interactive prize wheel, prize carousel and synthesized Web Audio feedback. Laravel backend exposing a REST API with Eloquent over MySQL: handles customers, prizes and entry validation.",
+        tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • REST API",
       },
     ],
   },
@@ -115,7 +117,10 @@ function Card({ p, btn, darkMode }) {
         </p>
 
         <a
-          href="/proyectos/rifa"
+          href={RIFA_URL}
+          data-cuelume-press
+          data-cuelume-release
+          onClick={() => cue(CUES.openProject)}
           className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
         >
           {btn}
