@@ -116,13 +116,7 @@ function Card({ p, btn, darkMode }) {
           {p.tech}
         </p>
 
-        
-          href={RIFA_URL}
-          data-cuelume-press
-          data-cuelume-release
-          onClick={() => cue(CUES.openProject)}
-          className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
-        >
+        <a href={RIFA_URL} data-cuelume-press data-cuelume-release onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
           {btn}
         </a>
       </div>
