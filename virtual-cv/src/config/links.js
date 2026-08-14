@@ -1,26 +1,22 @@
 /**
- * URL de la Rifa Virtual para el botón "Lanzar proyecto".
+ * URLs de los proyectos hermanos (Rifa Virtual, Libreta de Contactos) para
+ * los botones "Lanzar proyecto".
  *
  * La URL se deduce del host con el que se abrió la página, así funciona
- * tanto desde el PC como desde el celular en la misma red WiFi, sin
- * tener que editar nada:
+ * tanto desde el PC como desde el celular en la misma red WiFi, sin tener
+ * que editar nada:
  *
- *   http://localhost:5173       -> http://localhost:3000
- *   http://192.168.1.103:5173   -> http://192.168.1.103:3000
+ *   http://localhost:5173       -> http://localhost:<puerto dev>
+ *   http://192.168.1.103:5173   -> http://192.168.1.103:<puerto dev>
  *
- * En producción se usa la ruta real donde está desplegada la rifa.
+ * En producción se usa la ruta real donde está desplegado cada proyecto.
  *
- * Se puede forzar con VITE_RIFA_URL en el .env.
+ * Se puede forzar cada una con VITE_RIFA_URL / VITE_LIBRETA_URL en el .env.
  */
 
-// Puerto por defecto de Create React App, que es lo que usa la rifa.
-const RIFA_DEV_PORT = import.meta.env.VITE_RIFA_PORT || 3000;
-
-const PRODUCTION_PATH = "/proyectos/rifa";
-
-function resolveRifaUrl() {
-  if (import.meta.env.VITE_RIFA_URL) {
-    return import.meta.env.VITE_RIFA_URL;
+function resolveProjectUrl({ devPort, productionPath, overrideEnvValue }) {
+  if (overrideEnvValue) {
+    return overrideEnvValue;
   }
 
   if (typeof window !== "undefined" && window.location) {
@@ -32,11 +28,28 @@ function resolveRifaUrl() {
       /^\d+\.\d+\.\d+\.\d+$/.test(hostname);
 
     if (isLocal) {
-      return `${protocol}//${hostname}:${RIFA_DEV_PORT}`;
+      return `${protocol}//${hostname}:${devPort}`;
     }
   }
 
-  return PRODUCTION_PATH;
+  return productionPath;
 }
 
-export const RIFA_URL = resolveRifaUrl();
+// Puerto por defecto de Create React App, que es lo que usa la rifa.
+const RIFA_DEV_PORT = import.meta.env.VITE_RIFA_PORT || 3000;
+
+export const RIFA_URL = resolveProjectUrl({
+  devPort: RIFA_DEV_PORT,
+  productionPath: "/proyectos/rifa",
+  overrideEnvValue: import.meta.env.VITE_RIFA_URL,
+});
+
+// La Libreta usa 3001 (no 3000) para poder correr junto a la rifa sin
+// chocar puertos — ver vista/.env.example en ese repo.
+const LIBRETA_DEV_PORT = import.meta.env.VITE_LIBRETA_PORT || 3001;
+
+export const LIBRETA_URL = resolveProjectUrl({
+  devPort: LIBRETA_DEV_PORT,
+  productionPath: "/proyectos/libreta",
+  overrideEnvValue: import.meta.env.VITE_LIBRETA_URL,
+});
