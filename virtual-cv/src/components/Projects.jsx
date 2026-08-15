@@ -3,7 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import { translations } from "../translations";
 import { cue, CUES } from "../lib/sound";
-import { RIFA_URL } from "../config/links";
+import { RIFA_URL, LIBRETA_URL } from "../config/links";
 
 const data = {
   es: {
@@ -13,8 +13,17 @@ const data = {
         name: "Rifa Virtual",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
-        desc: "Aplicación de sorteos desarrollada para Redes Tevesat SAS. SPA en React con ruleta interactiva, carrusel de premios y sonido sintetizado con Web Audio API. Backend en Laravel con API REST y Eloquent sobre MySQL: gestiona clientes, premios y validación de participación.",
+        url: RIFA_URL,
+        desc: "Aplicación de sorteos para Redes Tevesat SAS, con una ruleta interactiva y sonido animado hechos en React. El backend en Laravel expone una API REST sobre MySQL para gestionar clientes, premios y validar cada participación.",
         tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • API REST",
+      },
+      {
+        name: "Libreta de Contactos",
+        image: "/libreta-preview.png",
+        video: "/libretaVideo.mp4",
+        url: LIBRETA_URL,
+        desc: "CRUD de contactos con autenticación JWT, pensado como muestra de automation testing de punta a punta: Karate DSL prueba toda la API REST y Playwright automatiza la interfaz con el patrón Page Object Model.",
+        tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
     ],
   },
@@ -25,8 +34,17 @@ const data = {
         name: "Virtual Raffle",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
-        desc: "Raffle application built for Redes Tevesat SAS. React SPA with an interactive prize wheel, prize carousel and synthesized Web Audio feedback. Laravel backend exposing a REST API with Eloquent over MySQL: handles customers, prizes and entry validation.",
+        url: RIFA_URL,
+        desc: "Raffle app for Redes Tevesat SAS, with an interactive prize wheel and animated sound built in React. The Laravel backend exposes a REST API over MySQL to manage customers, prizes, and entry validation.",
         tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • REST API",
+      },
+      {
+        name: "Contact Book",
+        image: "/libreta-preview.png",
+        video: "/libretaVideo.mp4",
+        url: LIBRETA_URL,
+        desc: "Contacts CRUD with JWT authentication, built as an end-to-end automation testing showcase: Karate DSL tests the full REST API and Playwright automates the UI using the Page Object Model pattern.",
+        tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
     ],
   },
@@ -116,7 +134,7 @@ function Card({ p, btn, darkMode }) {
           {p.tech}
         </p>
 
-        <a href={RIFA_URL} data-cuelume-press data-cuelume-release onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
+        <a href={p.url} data-cuelume-press data-cuelume-release onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
           {btn}
         </a>
       </div>
