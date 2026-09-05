@@ -1,5 +1,6 @@
 /**
- * URLs de los proyectos hermanos (Rifa Virtual, Libreta de Contactos) para
+ * URLs de los proyectos hermanos (Rifa Virtual, Libreta de Contactos,
+ * Cabra de León) para
  * los botones "Lanzar proyecto".
  *
  * La URL se deduce del host con el que se abrió la página, así funciona
@@ -11,7 +12,8 @@
  *
  * En producción se usa la ruta real donde está desplegado cada proyecto.
  *
- * Se puede forzar cada una con VITE_RIFA_URL / VITE_LIBRETA_URL en el .env.
+ * Se puede forzar cada una con VITE_RIFA_URL / VITE_LIBRETA_URL /
+ * VITE_CABRA_URL en el .env.
  */
 
 function resolveProjectUrl({ devPort, productionPath, overrideEnvValue }) {
@@ -52,4 +54,14 @@ export const LIBRETA_URL = resolveProjectUrl({
   devPort: LIBRETA_DEV_PORT,
   productionPath: "/proyectos/libreta",
   overrideEnvValue: import.meta.env.VITE_LIBRETA_URL,
+});
+
+// Cabra de León usa Vite igual que este portafolio, así que NO puede usar el
+// 5173: se le asignó el 5174 y está fijado con strictPort en su vite.config.
+const CABRA_DEV_PORT = import.meta.env.VITE_CABRA_PORT || 5174;
+
+export const CABRA_URL = resolveProjectUrl({
+  devPort: CABRA_DEV_PORT,
+  productionPath: "/proyectos/cabra",
+  overrideEnvValue: import.meta.env.VITE_CABRA_URL,
 });
