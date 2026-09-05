@@ -10,6 +10,14 @@ const data = {
     btn: "Lanzar proyecto",
     projects: [
       {
+        name: "Sistema de gestión de restaurante",
+        image: "/cabra-preview.png",
+        video: "/cabraVideo.mp4",
+        url: CABRA_URL,
+        desc: "Sistema de gestión para un restaurante real: página pública con menú en vivo y reservas, más un panel interno con cinco roles (administración, caja, mesero, cocina y domiciliario). Incluye tablero de pedidos, inventario con alertas, reportes de ventas y domicilios con repartidores propios o plataformas.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
+      },
+      {
         name: "Rifa Virtual",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
@@ -25,19 +33,19 @@ const data = {
         desc: "CRUD de contactos con autenticación JWT, pensado como muestra de automation testing de punta a punta: Karate DSL prueba toda la API REST y Playwright automatiza la interfaz con el patrón Page Object Model.",
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
-      {
-        name: "Sistema de gestión de restaurante",
-        image: "/cabra-preview.png",
-        video: "/cabraVideo.mp4",
-        url: CABRA_URL,
-        desc: "Sistema de gestión para un restaurante real: página pública con menú en vivo y reservas, más un panel interno con cinco roles (administración, caja, mesero, cocina y domiciliario). Incluye tablero de pedidos, inventario con alertas, reportes de ventas y domicilios con repartidores propios o plataformas.",
-        tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
-      },
     ],
   },
   en: {
     btn: "Launch Project",
     projects: [
+      {
+        name: "Restaurant management system",
+        image: "/cabra-preview.png",
+        video: "/cabraVideo.mp4",
+        url: CABRA_URL,
+        desc: "Management system for a real restaurant: a public site with a live menu and table booking, plus an internal panel with five roles (admin, cashier, waiter, kitchen and courier). Includes an order board, inventory alerts, sales reports and deliveries handled by in-house couriers or platforms.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
+      },
       {
         name: "Virtual Raffle",
         image: "/rifa-preview.png",
@@ -54,14 +62,7 @@ const data = {
         desc: "Contacts CRUD with JWT authentication, built as an end-to-end automation testing showcase: Karate DSL tests the full REST API and Playwright automates the UI using the Page Object Model pattern.",
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
-      {
-        name: "Restaurant management system",
-        image: "/cabra-preview.png",
-        video: "/cabraVideo.mp4",
-        url: CABRA_URL,
-        desc: "Management system for a real restaurant: a public site with a live menu and table booking, plus an internal panel with five roles (admin, cashier, waiter, kitchen and courier). Includes an order board, inventory alerts, sales reports and deliveries handled by in-house couriers or platforms.",
-        tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
-      },
+      
     ],
   },
 };
