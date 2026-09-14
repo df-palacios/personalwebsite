@@ -65,3 +65,13 @@ export const CABRA_URL = resolveProjectUrl({
   productionPath: "/proyectos/cabra",
   overrideEnvValue: import.meta.env.VITE_CABRA_URL,
 });
+
+// CIMA SPORT también es Vite: se le asignó el 5175 (el 5173 es de este
+// portafolio y el 5174 de Cabra de León), fijado con strictPort.
+const CIMA_DEV_PORT = import.meta.env.VITE_CIMA_PORT || 5175;
+
+export const CIMA_URL = resolveProjectUrl({
+  devPort: CIMA_DEV_PORT,
+  productionPath: "/proyectos/cima",
+  overrideEnvValue: import.meta.env.VITE_CIMA_URL,
+});

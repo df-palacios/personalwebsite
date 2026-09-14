@@ -3,7 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import { translations } from "../translations";
 import { cue, CUES } from "../lib/sound";
-import { RIFA_URL, LIBRETA_URL, CABRA_URL } from "../config/links";
+import { RIFA_URL, LIBRETA_URL, CABRA_URL, CIMA_URL } from "../config/links";
 
 const data = {
   es: {
@@ -17,7 +17,16 @@ const data = {
         desc: "Sistema de gestión para un restaurante real: página pública con menú en vivo y reservas, más un panel interno con cinco roles (administración, caja, mesero, cocina y domiciliario). Incluye tablero de pedidos, inventario con alertas, reportes de ventas y domicilios con repartidores propios o plataformas.",
         tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
       },
+     
       {
+        name: "Tienda de ropa deportiva",
+        image: "/cima-preview.png",
+        video: "/cimaVideo.mp4",
+        url: CIMA_URL,
+        desc: "E-commerce de ropa y calzado deportivo con panel interno. Catálogo con tallas, colores y existencias por variante; carrito y checkout; módulo de caja con desglose de IVA, arqueo de turno y comprobante; domicilios con repartidor propio o mensajería externa. Los permisos, no el cargo, deciden qué ve cada empleado, así que se pueden crear cargos nuevos sin tocar código.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
+      },
+       {
         name: "Rifa Virtual",
         image: "/rifa-preview.png",
         video: "/rifaVideo.mp4",
@@ -33,6 +42,7 @@ const data = {
         desc: "CRUD de contactos con autenticación JWT, pensado como muestra de automation testing de punta a punta: Karate DSL prueba toda la API REST y Playwright automatiza la interfaz con el patrón Page Object Model.",
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
+
     ],
   },
   en: {
@@ -63,6 +73,14 @@ const data = {
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
       
+      {
+        name: "Sportswear store",
+        image: "/cima-preview.png",
+        video: "/cimaVideo.mp4",
+        url: CIMA_URL,
+        desc: "Sportswear and footwear e-commerce with an internal panel. Catalogue with sizes, colours and per-variant stock; cart and checkout; a cash module with VAT breakdown, shift reconciliation and receipts; deliveries handled by in-house couriers or external carriers. Permissions, not job titles, decide what each employee sees, so new roles can be added without touching code.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
+      },
     ],
   },
 };
