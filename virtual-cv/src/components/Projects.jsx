@@ -3,7 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import { translations } from "../translations";
 import { cue, CUES } from "../lib/sound";
-import { RIFA_URL, LIBRETA_URL, CABRA_URL } from "../config/links";
+import { RIFA_URL, LIBRETA_URL, CABRA_URL, CIMA_URL } from "../config/links";
 
 const data = {
   es: {
@@ -17,6 +17,14 @@ const data = {
         desc: "Sistema de gestión para un restaurante real: página pública con menú en vivo y reservas, más un panel interno con cinco roles (administración, caja, mesero, cocina y domiciliario). Incluye tablero de pedidos, inventario con alertas, reportes de ventas y domicilios con repartidores propios o plataformas.",
         tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
       },
+       {
+        name: "Tienda de ropa deportiva",
+        image: "/cima-preview.png",
+        video: "/cimaVideo.mp4",
+        url: CIMA_URL,
+        desc: "E-commerce de ropa y calzado deportivo con panel interno. Catálogo con tallas, colores y existencias por variante; carrito y checkout; módulo de caja con desglose de IVA, arqueo de turno y comprobante; domicilios con repartidor propio o mensajería externa. Los permisos, no el cargo, deciden qué ve cada empleado, así que se pueden crear cargos nuevos sin tocar código.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
+      },
       {
         name: "Rifa Virtual",
         image: "/rifa-preview.png",
@@ -25,6 +33,7 @@ const data = {
         desc: "Aplicación de sorteos para Redes Tevesat SAS, con una ruleta interactiva y sonido animado hechos en React. El backend en Laravel expone una API REST sobre MySQL para gestionar clientes, premios y validar cada participación.",
         tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • API REST",
       },
+      
       {
         name: "Libreta de Contactos",
         image: "/libreta-preview.png",
@@ -63,6 +72,14 @@ const data = {
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
       },
       
+      {
+        name: "Sportswear store",
+        image: "/cima-preview.png",
+        video: "/cimaVideo.mp4",
+        url: CIMA_URL,
+        desc: "Sportswear and footwear e-commerce with an internal panel. Catalogue with sizes, colours and per-variant stock; cart and checkout; a cash module with VAT breakdown, shift reconciliation and receipts; deliveries handled by in-house couriers or external carriers. Permissions, not job titles, decide what each employee sees, so new roles can be added without touching code.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
+      },
     ],
   },
 };
@@ -80,8 +97,13 @@ function Card({ p, btn, darkMode }) {
           : "bg-white border-slate-200 shadow-sm"
       }`}
     >
-      <div
-        className="relative aspect-video"
+      <a
+        href={p.url}
+        aria-label={`${btn}: ${p.name}`}
+        data-cuelume-press
+        data-cuelume-release
+        onClick={() => cue(CUES.openProject)}
+        className="group relative block aspect-video cursor-pointer"
         onMouseEnter={() => {
           t.current = setTimeout(() => {
             if (v.current) {
@@ -124,7 +146,17 @@ function Card({ p, btn, darkMode }) {
             s ? "opacity-100" : "opacity-0"
           }`}
         />
-      </div>
+
+        {/* Pista visual: que quede claro que la imagen/video también se puede
+            clickear para lanzar el proyecto, no solo el botón de abajo. */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <span className="flex h-12 w-12 scale-90 items-center justify-center rounded-full bg-white/90 text-slate-900 opacity-0 shadow-lg transition-all duration-200 md:group-hover:scale-100 md:group-hover:opacity-100">
+            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5 translate-x-[1px]">
+              <path d="M8 5v14l11-7z" fill="currentColor" />
+            </svg>
+          </span>
+        </div>
+      </a>
 
       <div className="flex flex-1 flex-col p-4 md:p-6">
         <h3
