@@ -1,0 +1,104 @@
+MATERIAL PUBLICITARIO
+Diego Palacios - Ingeniero Electronico
+www.dfpalacios.cloud - WhatsApp 313 746 4587 - Cali, Valle del Cauca
+
+CONTENIDO
+  index.html ........ galeria: abrala con doble clic, o subala a un hosting
+  fonts.css ......... tipografias de la galeria (va junto a index.html)
+  bocetos/ .......... los disenos en SVG (vectorial, es el archivo maestro)
+  imprimir/ ......... cada pieza a tamano real, lista para Ctrl+P
+
+PIEZAS
+  A  Flyer 11 x 16 cm .............. volante de calle, 6 servicios
+  B  Media carta 14 x 21,6 cm ...... fondo claro, impresion economica
+  C  Cartel carta HORIZONTAL 27,9 x 21,6 cm .. 9 servicios, para pegar
+                                               en postes y paredes
+  D1 Tarjeta 9 x 6 cm - frente
+  D2 Tarjeta 9 x 6 cm - dorso
+  E  Post 1080 x 1080 px ........... redes sociales
+
+A QUIEN LE HABLA
+  El lector es el dueno de un negocio pequeno, no alguien que contrata
+  programadores. Los 4 sellos dorados responden a sus 4 miedos:
+
+    Quien es este senor?          -> Ingeniero Electronico
+    Y si no me funciona?          -> Se entrega funcionando
+    Yo como la manejo?            -> Le ensenamos a usarla
+    Y despues me deja tirado?     -> Soporte despues de entregar
+
+  NO se usa vocabulario de hoja de vida (QA Automation, Full-Stack,
+  pruebas automatizadas). A un tendero no le dice nada aunque sea cierto.
+
+  Si queda, porque si le sirve a un comerciante:
+    "caja con IVA" ...... facturacion real
+    "servidor propio" ... su pagina no depende de terceros
+
+LO QUE SE PROMETE
+  Ninguna pieza dice "sin plantillas" ni "desarrollo desde cero".
+  Las bases sobre las que usted construye son una VENTAJA: permiten
+  entregar mas rapido y mas barato sobre codigo ya probado.
+
+  Lo que se promete es ADAPTACION, no un proceso de fabricacion:
+    "Ajustada a su marca, sus productos y su contenido."
+  Es cierto y verificable: si el cliente pregunta como lo hace,
+  la respuesta no contradice el volante.
+
+  En aplicaciones dice "Android, iOS o aplicacion web instalable"
+  en lugar de prometer las dos tiendas.
+
+LENGUAJE: DOS NIVELES
+  Cada servicio se lee en dos alturas.
+    TITULO   -> lo entiende cualquier comerciante
+                "Que lo encuentren en Google"
+    DETALLE  -> le habla a quien sabe del tema
+                "Posicionamiento SEO local y Perfil de Empresa"
+
+  Terminos tecnicos que si aparecen, en la linea de detalle:
+    SEO local, Perfil de Empresa, dominio, hosting, correo corporativo,
+    certificado SSL, Android e iOS, responsive, migracion,
+    optimizacion de velocidad, redes, CCTV.
+
+PALETA (cada color tiene una funcion fija)
+  #102A4C  Azul zafiro ..... fondo principal / titulares sobre papel
+  #070D18  Tinta ........... profundidad del degradado
+  #2563EB  Azul primario ... botones, enlaces, enfasis
+  #38D6D0  Aqua ............ acento, SOLO sobre fondo oscuro
+  #E8B54A  Oro ............. credencial y sellos de confianza, SOLO sobre oscuro
+  #F6F7F5  Papel calido .... fondo de la version clara
+
+  REGLA: el aqua y el oro nunca van sobre fondo claro; ahi no alcanzan
+  el contraste minimo. Sobre papel se usan zafiro, azul primario y grafito.
+  Todas las combinaciones usadas superan el minimo WCAG AA (4,5:1).
+
+TIPOGRAFIAS
+  Titulares en Montserrat ExtraBold, textos en Inter.
+  Van INCRUSTADAS dentro de cada .svg, asi que se ven igual
+  en cualquier computador, sin instalar nada y sin internet.
+  Ningun texto baja de 2,2 mm de altura.
+
+OJO CON EL CARTEL HORIZONTAL (pieza C)
+  Al imprimir, el navegador debe quedar en ORIENTACION HORIZONTAL.
+  La pagina de la carpeta "imprimir" ya lo pide por CSS, pero si su
+  impresora lo ignora, cambielo a mano en el dialogo de impresion.
+
+COMO SACAR EL PDF
+  1. Abra el archivo correspondiente de la carpeta "imprimir"
+  2. Ctrl + P
+  3. Destino: Guardar como PDF
+  4. Margenes: Ninguno   /   Graficos de fondo: activado
+  Sale al tamano exacto en milimetros.
+
+PARA LA LITOGRAFIA
+  Entregue el archivo .svg de la carpeta "bocetos".
+  Es vectorial: se abre en Illustrator, CorelDRAW, Inkscape o Canva
+  y se puede escalar o editar sin perder calidad.
+  Si le piden sangrado (3 mm por lado), pidalo y se genera esa version.
+
+PARA PUBLICAR LA GALERIA EN INTERNET
+  Suba la carpeta completa tal cual (index.html, fonts.css,
+  bocetos/ e imprimir/) a cualquier hosting estatico.
+  No necesita servidor ni base de datos.
+
+LOS CODIGOS QR SON REALES
+  QR blanco/negro -> abre www.dfpalacios.cloud
+  QR junto al icono verde -> abre WhatsApp al 313 746 4587

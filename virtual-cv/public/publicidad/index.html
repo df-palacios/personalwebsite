@@ -1,0 +1,250 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Material publicitario · dfpalacios.cloud</title>
+<meta name="description" content="Flyers, tarjetas y piezas para redes — páginas web y aplicaciones a la medida. Diego Palacios, Ingeniero Electrónico.">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --ink:#070D18; --navy:#102A4C;
+  --bg:#080F1B; --surface:#11203A; --border:#22385A;
+  --tx:#EAF1F9; --dim:#B9C7D8;
+  --aqua:#38D6D0; --azure:#2563EB; --gold:#E8B54A;
+  --head:'Montserrat',system-ui,Segoe UI,Arial,sans-serif;
+  --body:'Inter',system-ui,Segoe UI,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{padding:52px 0 8px}
+.eyebrow{font:800 14px/1 var(--head);letter-spacing:.16em;color:var(--aqua);text-transform:uppercase}
+h1{font:800 clamp(30px,5.2vw,44px)/1.12 var(--head);letter-spacing:-.015em;margin:16px 0 6px}
+h1 span{color:var(--aqua)}
+.cred{color:var(--gold);font:600 17px/1.5 var(--body);margin:0 0 14px}
+.lede{color:var(--dim);font-size:18px;max-width:62ch;margin:0}
+.meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:600 14px/1 var(--body);color:var(--tx);background:var(--surface);
+      border:1px solid var(--border);border-radius:999px;padding:10px 16px;text-decoration:none}
+.chip:hover{border-color:var(--aqua)}
+.btn{display:inline-flex;align-items:center;gap:9px;font:800 15px/1 var(--head);
+     color:#04220F;background:var(--aqua);border:1px solid var(--aqua);border-radius:999px;
+     padding:13px 20px;text-decoration:none;transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:17px;height:17px;flex:none}
+.back{display:inline-flex;align-items:center;gap:7px;color:var(--dim);font-size:15px;
+      text-decoration:none;margin-bottom:22px}
+.back:hover{color:var(--aqua)}
+.back svg{width:15px;height:15px}
+h2{font:800 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;
+   color:var(--aqua);margin:56px 0 18px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));align-items:start}
+figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+figure img{display:block;width:100%;height:auto;background:#fff;border-radius:6px}
+figcaption{padding-top:14px}
+.t{font:800 17px/1.3 var(--head);margin-bottom:4px}
+.d{color:var(--dim);font-size:15px}
+figcaption a{display:inline-block;margin-top:9px;color:var(--aqua);font-weight:600;
+             font-size:15px;text-decoration:none;border-bottom:1px solid transparent}
+figcaption a:hover{border-bottom-color:var(--aqua)}
+.cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+li{color:var(--dim);font-size:16.5px;padding-left:16px;border-left:2px solid var(--border)}
+li b{color:var(--tx);font-weight:600;font-family:var(--head)}
+.pal{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.sw{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
+.sw i{display:block;height:64px}
+.sw div{padding:11px 13px}
+.sw b{display:block;font:800 14px/1.3 var(--head)}
+.sw code{font:400 12px/1.6 ui-monospace,Consolas,monospace;color:var(--dim)}
+.sw em{display:block;font-style:normal;font-size:12.5px;color:var(--dim);margin-top:3px}
+.note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--aqua);
+      border-radius:12px;padding:20px 24px;color:var(--dim);font-size:16px;max-width:80ch}
+.note b{color:var(--tx)}
+code.k{font-family:ui-monospace,Consolas,monospace;font-size:.92em;
+     background:#0B1524;border:1px solid var(--border);border-radius:5px;padding:1px 6px}
+table{border-collapse:collapse;width:100%;max-width:640px;font-size:15.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border);color:var(--dim)}
+th{color:var(--tx);font:800 13px/1 var(--head);letter-spacing:.08em;text-transform:uppercase}
+td b{color:var(--tx);font-weight:600}
+.ok{color:var(--aqua);font-weight:600}
+footer{margin:66px 0 56px;padding-top:24px;border-top:1px solid var(--border);
+       color:var(--dim);font-size:15px}
+@media (max-width:600px){header{padding-top:34px}body{font-size:16px}}
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <a class="back" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+     stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Volver al portafolio</a>
+  <div class="eyebrow">Material publicitario</div>
+  <h1>Desarrollo web y móvil <span>a la medida</span></h1>
+  <p class="cred">Diego Palacios · Ingeniero Electrónico</p>
+  <p class="lede">Seis piezas listas para imprimir y publicar, con un mismo sistema visual:
+  volantes, tarjeta de presentación y post para redes.</p>
+  <div class="meta">
+    <a class="chip" href="https://www.dfpalacios.cloud">www.dfpalacios.cloud</a>
+    <a class="chip" href="https://wa.me/573137464587">WhatsApp 313 746 4587</a>
+    <span class="chip">Cali, Valle del Cauca</span>
+    <span class="chip">Cotización sin costo</span>
+  </div>
+  <div class="meta" style="margin-top:16px">
+    <a class="btn" href="bocetos-dfpalacios.zip" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+       stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+      Descargar los bocetos (ZIP)
+    </a>
+    <span class="chip" style="color:var(--dim)">6 piezas en SVG · listas para imprenta · 445 KB</span>
+  </div>
+</header>
+
+<h2>Piezas</h2>
+<div class="grid">
+  <figure><img src="bocetos/A-flyer-110x160-virtualizamos.svg" alt="Flyer 11 x 16 cm">
+    <figcaption><div class="t">A · Flyer 11 × 16 cm</div>
+    <div class="d">Volante para reparto en calle. Seis servicios al frente.</div>
+    <a href="imprimir/A-flyer-110x160-virtualizamos.html">Abrir a tamaño real</a></figcaption></figure>
+
+  <figure><img src="bocetos/B-flyer-140x216-claro.svg" alt="Flyer media carta">
+    <figcaption><div class="t">B · Media carta</div>
+    <div class="d">Fondo claro: impresión más económica, mismo sistema visual.</div>
+    <a href="imprimir/B-flyer-140x216-claro.html">Abrir a tamaño real</a></figcaption></figure>
+
+  <figure style="grid-column:span 2"><img src="bocetos/C-cartel-carta-horizontal-279x216.svg" alt="Cartel carta horizontal">
+    <figcaption><div class="t">C · Cartel carta horizontal</div>
+    <div class="d">27,9 × 21,6 cm. Nueve servicios y los cuatro sellos. Pensado para pegar en postes y paredes.</div>
+    <a href="imprimir/C-cartel-carta-horizontal-279x216.html">Abrir a tamaño real</a></figcaption></figure>
+
+  <figure><img src="bocetos/D1-tarjeta-90x60-frente.svg" alt="Tarjeta frente">
+    <figcaption><div class="t">D1 · Tarjeta 9 × 6 cm — frente</div>
+    <div class="d">La página como marca, el lema y la credencial.</div>
+    <a href="imprimir/D1-tarjeta-90x60-frente.html">Abrir a tamaño real</a></figcaption></figure>
+
+  <figure><img src="bocetos/D2-tarjeta-90x60-dorso.svg" alt="Tarjeta dorso">
+    <figcaption><div class="t">D2 · Tarjeta 9 × 6 cm — dorso</div>
+    <div class="d">Nombre, título, cinco servicios y QR al portafolio.</div>
+    <a href="imprimir/D2-tarjeta-90x60-dorso.html">Abrir a tamaño real</a></figcaption></figure>
+
+  <figure><img src="bocetos/E-post-redes-1080x1080.svg" alt="Post para redes sociales">
+    <figcaption><div class="t">E · Post 1080 × 1080</div>
+    <div class="d">Facebook, Marketplace e Instagram.</div></figcaption></figure>
+</div>
+
+<h2>Paleta</h2>
+<p class="lede" style="margin-bottom:20px">Cinco colores con función fija: un primario, un acento frío,
+un acento cálido de prestigio y dos neutros. Todas las combinaciones de texto que se usan en las piezas
+superan el mínimo <b style="color:var(--tx)">WCAG AA</b>.</p>
+<div class="pal">
+  <div class="sw"><i style="background:#102A4C"></i><div><b>Azul zafiro</b><code>#102A4C</code>
+    <em>Fondo principal y titulares sobre papel</em></div></div>
+  <div class="sw"><i style="background:#070D18"></i><div><b>Tinta</b><code>#070D18</code>
+    <em>Profundidad del degradado</em></div></div>
+  <div class="sw"><i style="background:#2563EB"></i><div><b>Azul primario</b><code>#2563EB</code>
+    <em>Botones, enlaces, énfasis</em></div></div>
+  <div class="sw"><i style="background:#38D6D0"></i><div><b>Aqua</b><code>#38D6D0</code>
+    <em>Acento — solo sobre fondo oscuro</em></div></div>
+  <div class="sw"><i style="background:#E8B54A"></i><div><b>Oro</b><code>#E8B54A</code>
+    <em>Credencial y sellos de confianza</em></div></div>
+  <div class="sw"><i style="background:#F6F7F5"></i><div><b>Papel cálido</b><code>#F6F7F5</code>
+    <em>Fondo de la versión clara</em></div></div>
+</div>
+
+<h2>Contraste verificado</h2>
+<table>
+  <tr><th>Combinación</th><th>Ratio</th><th>AA</th></tr>
+  <tr><td><b>Blanco</b> sobre azul zafiro</td><td>14,4 : 1</td><td class="ok">Cumple</td></tr>
+  <tr><td><b>Aqua</b> sobre azul zafiro</td><td>8,0 : 1</td><td class="ok">Cumple</td></tr>
+  <tr><td><b>Oro</b> sobre azul zafiro</td><td>7,6 : 1</td><td class="ok">Cumple</td></tr>
+  <tr><td><b>Gris claro</b> sobre azul zafiro</td><td>8,4 : 1</td><td class="ok">Cumple</td></tr>
+  <tr><td><b>Grafito</b> sobre papel</td><td>9,7 : 1</td><td class="ok">Cumple</td></tr>
+  <tr><td><b>Azul</b> sobre papel</td><td>6,2 : 1</td><td class="ok">Cumple</td></tr>
+</table>
+<div class="note" style="margin-top:18px">
+  <b>Regla de uso:</b> el aqua y el oro nunca van sobre fondo claro — ahí no alcanzan el contraste
+  mínimo (1,7 : 1 y 3,0 : 1). Sobre papel se usan el azul zafiro, el azul primario y el grafito.
+</div>
+
+<h2>Servicios</h2>
+<div class="cols">
+  <ul>
+    <li><b>Páginas web a la medida</b> — ajustada a su marca, sus productos y su contenido.</li>
+    <li><b>Tiendas en línea</b> — catálogo con tallas, existencias y carrito.</li>
+    <li><b>Aplicaciones móviles</b> — Android, iOS o aplicación web instalable.</li>
+    <li><b>Que lo encuentren en Google</b> — posicionamiento SEO local y Perfil de Empresa.</li>
+  </ul>
+  <ul>
+    <li><b>Su página publicada y su correo</b> — servidor propio: dominio, hosting y correo con SSL.</li>
+    <li><b>Programas para su negocio</b> — inventario, ventas, caja con IVA y reportes.</li>
+    <li><b>Renovamos su página actual</b> — rediseño, migración y optimización de velocidad.</li>
+    <li><b>Soporte, equipos y cámaras</b> — mantenimiento, redes y CCTV.</li>
+  </ul>
+</div>
+
+<h2>Frases</h2>
+<ul>
+  <li><b>Virtualizamos su negocio</b> — titular en A, C, D1 y E.</li>
+  <li><b>Su negocio en internet, a su medida</b> — titular de la media carta.</li>
+  <li><b>Desarrollo web y móvil a la medida</b> — encabezado de las tres piezas grandes.</li>
+  <li><b>Se ve igual de bien en celular, tablet y computador</b> — la promesa que más tranquiliza al cliente.</li>
+  <li><b>Ajustada a su marca, sus productos y su contenido</b> — promete adaptación, que es lo que usted sí entrega.</li>
+</ul>
+
+<h2>Cómo imprimir</h2>
+<div class="note">
+  Abra <b>“Abrir a tamaño real”</b>, presione <b>Ctrl + P</b> y elija <b>Guardar como PDF</b>.
+  En opciones: <b>márgenes “Ninguno”</b> y <b>gráficos de fondo activados</b>.
+  El archivo sale al tamaño exacto en milímetros.<br><br>
+  A la litografía entréguele el <b>.svg</b> de la carpeta <code class="k">bocetos</code>: es vectorial, se escala
+  sin perder calidad y <b>lleva las tipografías incrustadas</b>, así que se ve igual en cualquier computador.
+  Si le piden sangrado de 3 mm, pídamelo y le genero esa versión.
+</div>
+
+<h2>A quién le habla</h2>
+<div class="note" style="margin-bottom:34px">
+  El lector es el dueño de un negocio pequeño, no alguien que contrata programadores.
+  Por eso los cuatro sellos dorados de la hoja carta responden a sus cuatro miedos, en ese orden:<br><br>
+  <b>¿Quién es este señor?</b> → Ingeniero Electrónico<br>
+  <b>¿Y si no me funciona?</b> → Se entrega funcionando<br>
+  <b>¿Yo cómo la manejo, si no sé de computadores?</b> → Le enseñamos a usarla<br>
+  <b>¿Y después me deja tirado?</b> → Soporte después de entregar<br><br>
+  Nada de vocabulario de hoja de vida: no aparece “QA Automation”, “Full-Stack” ni “pruebas
+  automatizadas”. A un tendero eso no le dice nada, aunque sea cierto. Lo que sí queda, porque sí
+  le sirve a un comerciante: <b>“caja con IVA”</b> (facturación real) y <b>“servidor propio”</b>
+  (su página no depende de terceros).
+</div>
+
+<h2>Lo que se promete</h2>
+<div class="note" style="margin-bottom:34px">
+  Ninguna pieza dice “sin plantillas” ni “desarrollo desde cero”. Las bases sobre las que usted
+  construye son una <b>ventaja</b>, no algo que esconder: permiten entregar más rápido y más barato
+  sobre código ya probado.<br><br>
+  Por eso lo que se promete es <b>adaptación</b> —“ajustada a su marca, sus productos y su contenido”—
+  y no un proceso de fabricación. Es cierto, es verificable, y si un cliente pregunta cómo lo hace,
+  la respuesta no contradice el volante.<br><br>
+  En aplicaciones dice <b>“Android, iOS o aplicación web instalable”</b> en lugar de prometer las dos
+  tiendas: deja la puerta abierta a la opción que sea viable en cada proyecto.
+</div>
+
+<h2>Lenguaje: dos niveles</h2>
+<div class="note" style="margin-bottom:34px">
+  Cada servicio se lee en dos alturas. El <b>título</b> lo entiende cualquier comerciante
+  (“Que lo encuentren en Google”), y la <b>línea de abajo</b> le habla a quien sabe
+  (“Posicionamiento SEO local y Perfil de Empresa”).<br><br>
+  Así el cliente común no se pierde, y un cliente técnico —o alguien que compare cotizaciones—
+  reconoce los términos exactos: SEO, SSL, dominio y hosting, Android e iOS, migración,
+  optimización de velocidad, CCTV y redes.
+</div>
+
+<h2>Tipografías</h2>
+<div class="note">
+  Titulares en <b>Montserrat ExtraBold</b> y textos en <b>Inter</b>, elegidas por legibilidad
+  en tamaños pequeños y por tener las tildes y la ñ bien dibujadas. Ningún texto baja de
+  <b>2,2 mm</b> de altura, el mínimo cómodo de lectura en impresión.
+</div>
+
+<footer>
+  Diego Palacios · Ingeniero Electrónico — www.dfpalacios.cloud · WhatsApp 313 746 4587 · Cali, Valle del Cauca
+</footer>
+
+</div></body></html>
