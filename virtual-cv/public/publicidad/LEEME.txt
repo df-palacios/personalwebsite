@@ -4,9 +4,13 @@ www.dfpalacios.cloud - WhatsApp 313 746 4587 - Cali, Valle del Cauca
 
 CONTENIDO
   index.html ........ galeria: abrala con doble clic, o subala a un hosting
-  fonts.css ......... tipografias de la galeria (va junto a index.html)
   bocetos/ .......... los disenos en SVG (vectorial, es el archivo maestro)
   imprimir/ ......... cada pieza a tamano real, lista para Ctrl+P
+
+  index.html y las paginas de imprimir/ llevan el SVG INCRUSTADO dentro
+  del HTML, no cargado como imagen externa. Por eso funcionan aunque el
+  navegador se niegue a decodificar SVG servidos como <img>. Cada archivo
+  se abre solo, sin depender de nada mas.
 
 PIEZAS
   A  Flyer 11 x 16 cm .............. volante de calle, 6 servicios
