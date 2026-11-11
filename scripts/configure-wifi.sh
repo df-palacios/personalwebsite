@@ -2,65 +2,56 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-# ==========================================================
-# Wi-Fi configuration for df-server (Ubuntu Server)
-# Preferred order:
+# =====================================================
+# df-server - Configuracion Wi-Fi persistente
+#
+# Prioridad:
 # 1. APARTAESTUDIOS_5G
 # 2. APARTAESTUDIOS_2.4G
 # 3. TP-LINK_97EE
 #
-# Ethernet remains enabled and has route preference.
-# Passwords are never stored in this script.
-# ==========================================================
+# Ethernet permanece independiente.
+# No modifica Netplan ni systemd-networkd.
+# =====================================================
 
 WIFI_IF="wlp2s0"
 
-# Check root permissions
 if [[ "$EUID" -ne 0 ]]; then
-    echo "Ejecuta el script con: sudo bash configure-wifi.sh"
+    echo "Ejecuta: sudo bash scripts/configure-wifi.sh"
     exit 1
 fi
 
-# Check NetworkManager
-if ! command -v nmcli >/dev/null 2>&1; then
-    echo "ERROR: NetworkManager (nmcli) no está instalado."
+command -v nmcli >/dev/null || {
+    echo "ERROR: NetworkManager no esta disponible."
     exit 1
-fi
+}
 
-if ! nmcli device status | grep -q "$WIFI_IF"; then
-    echo "ERROR: No se encontró la interfaz $WIFI_IF."
-    echo "Interfaces disponibles:"
-    nmcli device status
+nmcli device status | grep -q "$WIFI_IF" || {
+    echo "ERROR: No existe la interfaz $WIFI_IF."
     exit 1
-fi
+}
 
-# Request passwords without displaying them
-echo "Configuración de las redes Wi-Fi."
-echo "Las contraseñas se guardarán en NetworkManager, no en Git."
+echo "Configuracion de redes Wi-Fi"
 echo
 
-read -rsp "Contraseña de APARTAESTUDIOS_5G: " PASS_5G
+read -rsp "Contrasena APARTAESTUDIOS_5G: " PASS_5G
 echo
-read -rsp "Contraseña de APARTAESTUDIOS_2.4G: " PASS_24
+read -rsp "Contrasena APARTAESTUDIOS_2.4G: " PASS_24
 echo
-read -rsp "Contraseña de TP-LINK_97EE: " PASS_TP
+read -rsp "Contrasena TP-LINK_97EE: " PASS_TP
 echo
 
-# Find or create a connection profile
-ensure_wifi_profile() {
+configure_wifi() {
     local name="$1"
     local ssid="$2"
     local band="$3"
     local password="$4"
     local priority="$5"
 
-    echo "Configurando $name..."
-
     if nmcli -t -f NAME connection show | grep -Fxq "$name"; then
-        nmcli connection modify "$name" \
-            connection.type 802-11-wireless \
-            802-11-wireless.ssid "$ssid"
+        echo "Actualizando perfil: $name"
     else
+        echo "Creando perfil: $name"
         nmcli connection add type wifi \
             ifname "$WIFI_IF" \
             con-name "$name" \
@@ -69,65 +60,61 @@ ensure_wifi_profile() {
 
     nmcli connection modify "$name" \
         connection.interface-name "$WIFI_IF" \
-        connection.permissions "" \
         connection.autoconnect yes \
         connection.autoconnect-priority "$priority" \
-        ipv4.route-metric 600 \
-        ipv6.route-metric 600 \
+        connection.permissions "" \
         802-11-wireless.ssid "$ssid" \
         802-11-wireless.band "$band" \
+        802-11-wireless.cloned-mac-address permanent \
         wifi-sec.key-mgmt wpa-psk \
         wifi-sec.psk "$password" \
-        wifi-sec.psk-flags 0
+        wifi-sec.psk-flags 0 \
+        ipv4.route-metric 600 \
+        ipv6.route-metric 600
 }
 
-# Configure networks in priority order
-ensure_wifi_profile \
+configure_wifi \
     "APARTAESTUDIOS_5G" \
     "APARTAESTUDIOS_5G" \
     "a" "$PASS_5G" 30
 
-ensure_wifi_profile \
+configure_wifi \
     "APARTAESTUDIOS_2.4G" \
     "APARTAESTUDIOS_2.4G" \
     "bg" "$PASS_24" 20
 
-ensure_wifi_profile \
+configure_wifi \
     "TP-LINK_97EE" \
     "TP-LINK_97EE" \
     "" "$PASS_TP" 10
 
-# Clear password variables
 unset PASS_5G PASS_24 PASS_TP
 
-# Enable Wi-Fi radio
 nmcli radio wifi on
 
-# Ethernet: automatic connection and preferred default route
 echo
-echo "Configurando perfiles Ethernet..."
+echo "Configuracion terminada."
+echo
+echo "=== PERFILES WIFI ==="
 
-while IFS=: read -r name type; do
-    if [[ "$type" == "802-3-ethernet" ]]; then
-        echo "Ethernet: $name"
-        nmcli connection modify "$name" \
-            connection.autoconnect yes \
-            ipv4.route-metric 100 \
-            ipv6.route-metric 100
-    fi
-done < <(nmcli -t -f NAME,TYPE connection show)
+nmcli -f NAME,AUTOCONNECT,AUTOCONNECT-PRIORITY \
+    connection show
 
 echo
-echo "=========================================="
-echo "Configuración completada correctamente."
-echo "=========================================="
-echo
-echo "Prioridad Wi-Fi:"
-nmcli -f NAME,AUTOCONNECT,AUTOCONNECT-PRIORITY connection show
-echo
-echo "Estado de dispositivos:"
+echo "=== DISPOSITIVOS ==="
+
 nmcli device status
+
 echo
-echo "Ethernet conserva prioridad de ruta (métrica 100)."
-echo "Wi-Fi utiliza métrica 600."
-echo "No se ha desconectado ninguna interfaz."
+echo "=== REDES VISIBLES ==="
+
+nmcli -f IN-USE,SSID,SIGNAL dev wifi list
+
+echo
+echo "=== RUTAS ==="
+
+ip route
+
+echo
+echo "Ethernet no fue modificado."
+echo "No se reinicio ni desconecto ninguna interfaz."
