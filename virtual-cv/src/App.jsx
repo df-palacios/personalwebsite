@@ -54,10 +54,10 @@ function App() {
         "
       >
         <Hero />
+        <Projects />
         <Experience />
         <Skills />
         <Education />
-        <Projects />
         <Contact />
       </main>
     </div>

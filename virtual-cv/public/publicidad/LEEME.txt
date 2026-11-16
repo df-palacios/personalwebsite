@@ -1,5 +1,5 @@
 MATERIAL PUBLICITARIO
-Diego Palacios - Ingeniero Electronico
+Diego Palacios - Desarrollador Web y Movil
 www.dfpalacios.cloud - WhatsApp 313 746 4587 - Cali, Valle del Cauca
 
 CONTENIDO
@@ -25,7 +25,7 @@ A QUIEN LE HABLA
   El lector es el dueno de un negocio pequeno, no alguien que contrata
   programadores. Los 4 sellos dorados responden a sus 4 miedos:
 
-    Quien es este senor?          -> Ingeniero Electronico
+    Quien es este senor?          -> Desarrollo profesional
     Y si no me funciona?          -> Se entrega funcionando
     Yo como la manejo?            -> Le ensenamos a usarla
     Y despues me deja tirado?     -> Soporte despues de entregar
@@ -89,7 +89,7 @@ COMO SACAR EL PDF
   1. Abra el archivo correspondiente de la carpeta "imprimir"
   2. Ctrl + P
   3. Destino: Guardar como PDF
-  4. Margenes: Ninguno   /   Graficos de fondo: activado
+  4. Escala: 100 %  (la pagina ya pide sin margenes y con graficos de fondo)
   Sale al tamano exacto en milimetros.
 
 PARA LA LITOGRAFIA
@@ -99,7 +99,7 @@ PARA LA LITOGRAFIA
   Si le piden sangrado (3 mm por lado), pidalo y se genera esa version.
 
 PARA PUBLICAR LA GALERIA EN INTERNET
-  Suba la carpeta completa tal cual (index.html, fonts.css,
+  Suba la carpeta completa tal cual (index.html,
   bocetos/ e imprimir/) a cualquier hosting estatico.
   No necesita servidor ni base de datos.
 

@@ -13,6 +13,7 @@ export const translations = {
     skills: "Technical Skills",
     education: "Education",
     projects: "Projects",
+    viewProjects: "View my projects",
     certifications: "Courses & Certifications",
     contact: "Contact",
 
@@ -87,6 +88,7 @@ export const translations = {
     skills: "Habilidades Técnicas",
     education: "Educación",
     projects: "Proyectos",
+    viewProjects: "Ver mis proyectos",
     certifications: "Cursos y Certificaciones",
     contact: "Contacto",
 

@@ -31,10 +31,10 @@ function Navbar() {
   }
 
   const navLinks = [
+    { href: "#projects", label: t.projects },
     { href: "#experience", label: t.experience },
     { href: "#skills", label: t.skills },
     { href: "#education", label: t.education },
-    { href: "#projects", label: t.projects },
     { href: "#contact", label: t.contact },
   ]
 
@@ -71,6 +71,18 @@ function Navbar() {
           <div className="hidden lg:flex shrink-0 items-center gap-4 xl:gap-5">
 
             <a
+              href="#projects"
+              onClick={() => cue(CUES.navClick)}
+              className={`text-sm whitespace-nowrap transition ${
+                darkMode
+                  ? "text-slate-300 hover:text-blue-400"
+                  : "text-slate-600 hover:text-blue-600"
+              }`}
+            >
+              {t.projects}
+            </a>
+
+            <a
               href="#experience"
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
@@ -104,18 +116,6 @@ function Navbar() {
               }`}
             >
               {t.education}
-            </a>
-
-            <a
-              href="#projects"
-              onClick={() => cue(CUES.navClick)}
-              className={`text-sm whitespace-nowrap transition ${
-                darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
-              }`}
-            >
-              {t.projects}
             </a>
 
             <a

@@ -100,5 +100,5 @@ export const CUES = {
   menu: "toggle",
   navClick: "tick",
   download: "success",
-  openProject: "release",
+  openProject: "toggle",
 };

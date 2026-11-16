@@ -23,7 +23,7 @@ const data = {
         image: "/cima-preview.png",
         video: "/cimaVideo.mp4",
         url: CIMA_URL,
-        desc: "E-commerce de ropa y calzado deportivo con panel interno. Catálogo con tallas, colores y existencias por variante; carrito y checkout; módulo de caja con desglose de IVA, arqueo de turno y comprobante; domicilios con repartidor propio o mensajería externa. Los permisos, no el cargo, deciden qué ve cada empleado, así que se pueden crear cargos nuevos sin tocar código.",
+        desc: "E-commerce de ropa y calzado deportivo con panel interno: catálogo con existencias por variante, checkout, caja con IVA y arqueo de turno, y domicilios. Los permisos, no el cargo, deciden qué ve cada empleado.",
         tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
       },
        {
@@ -79,7 +79,7 @@ const data = {
         image: "/cima-preview.png",
         video: "/cimaVideo.mp4",
         url: CIMA_URL,
-        desc: "Sportswear and footwear e-commerce with an internal panel. Catalogue with sizes, colours and per-variant stock; cart and checkout; a cash module with VAT breakdown, shift reconciliation and receipts; deliveries handled by in-house couriers or external carriers. Permissions, not job titles, decide what each employee sees, so new roles can be added without touching code.",
+        desc: "Sportswear and footwear e-commerce with an internal panel: catalogue with per-variant stock, checkout, a cash module with VAT and shift reconciliation, and deliveries. Permissions, not job titles, decide what each employee sees.",
         tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
       },
     ],
@@ -100,10 +100,8 @@ function Card({ p, btn, darkMode }) {
       }`}
     >
       <a
-        href={p.url}
+        href={p.url} target="_blank" rel="noopener noreferrer"
         aria-label={`${btn}: ${p.name}`}
-        data-cuelume-press
-        data-cuelume-release
         onClick={() => cue(CUES.openProject)}
         className="group relative block aspect-video cursor-pointer"
         onMouseEnter={() => {
@@ -185,7 +183,7 @@ function Card({ p, btn, darkMode }) {
           {p.tech}
         </p>
 
-        <a href={p.url} data-cuelume-press data-cuelume-release onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
+        <a href={p.url} target="_blank" rel="noopener noreferrer" onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
           {btn}
         </a>
       </div>
