@@ -6,6 +6,7 @@ CONTENIDO
   index.html ........ galeria: abrala con doble clic, o subala a un hosting
   bocetos/ .......... los disenos en SVG (vectorial, es el archivo maestro)
   imprimir/ ......... cada pieza a tamano real, lista para Ctrl+P
+  png/ .............. cada pieza como imagen, para mostrar o enviar
 
   index.html y las paginas de imprimir/ llevan el SVG INCRUSTADO dentro
   del HTML, no cargado como imagen externa. Por eso funcionan aunque el
@@ -53,9 +54,9 @@ LO QUE SE PROMETE
 LENGUAJE: DOS NIVELES
   Cada servicio se lee en dos alturas.
     TITULO   -> lo entiende cualquier comerciante
-                "Que lo encuentren en Google"
+                "Buen posicionamiento en Google"
     DETALLE  -> le habla a quien sabe del tema
-                "Posicionamiento SEO local y Perfil de Empresa"
+                "SEO local y Perfil de Empresa"
 
   Terminos tecnicos que si aparecen, en la linea de detalle:
     SEO local, Perfil de Empresa, dominio, hosting, correo corporativo,
@@ -92,6 +93,12 @@ COMO SACAR EL PDF
   4. Escala: 100 %  (la pagina ya pide sin margenes y con graficos de fondo)
   Sale al tamano exacto en milimetros.
 
+PARA MOSTRAR O ENVIAR
+  Use las imagenes de la carpeta "png". Se abren en cualquier celular
+  y se envian por WhatsApp o correo sin instalar nada.
+  Salen a 300 ppp (el cartel a 200 ppp y el post a 1080 x 1080 px).
+  Para imprimir use el PDF o el .svg, no el PNG.
+
 PARA LA LITOGRAFIA
   Entregue el archivo .svg de la carpeta "bocetos".
   Es vectorial: se abre en Illustrator, CorelDRAW, Inkscape o Canva
@@ -100,7 +107,7 @@ PARA LA LITOGRAFIA
 
 PARA PUBLICAR LA GALERIA EN INTERNET
   Suba la carpeta completa tal cual (index.html,
-  bocetos/ e imprimir/) a cualquier hosting estatico.
+  bocetos/, imprimir/ y png/) a cualquier hosting estatico.
   No necesita servidor ni base de datos.
 
 LOS CODIGOS QR SON REALES
