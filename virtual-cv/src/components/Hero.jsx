@@ -35,7 +35,7 @@ function Hero() {
                     : "text-slate-900"
                 }`}
               >
-                Diego Fernando Palacios
+                Diego Palacios
               </h1>
 
               <p
