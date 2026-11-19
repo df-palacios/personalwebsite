@@ -140,7 +140,7 @@ function Hero() {
               }`}
             >
               <img
-                src="/profile.jpg"
+                src="/profile-v2.jpg"
                 alt="Diego Palacios"
                 width="460"
                 height="460"
