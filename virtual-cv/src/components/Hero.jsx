@@ -18,7 +18,7 @@ function Hero() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 md:gap-12 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-[minmax(0,1fr)_auto] gap-6 md:gap-10 lg:gap-14 items-center">
 
           <div className="flex flex-col gap-4 md:gap-8">
 
@@ -39,7 +39,7 @@ function Hero() {
               </h1>
 
               <p
-                className={`text-base md:text-lg leading-relaxed max-w-2xl text-left ${
+                className={`text-base md:text-lg leading-relaxed max-w-2xl lg:max-w-3xl text-left ${
                   darkMode
                     ? "text-slate-300"
                     : "text-slate-600"
@@ -53,7 +53,7 @@ function Hero() {
             <a
               href="#projects"
               onClick={() => cue(CUES.navClick)}
-              className="inline-flex items-center justify-center gap-2 h-11 px-5 md:h-12 md:px-6 rounded-xl text-sm md:text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-sm transition"
+              className="inline-flex items-center justify-center gap-2 h-11 px-5 md:h-12 md:px-8 md:self-start rounded-xl text-sm md:text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-sm transition"
             >
               {t.viewProjects}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
@@ -130,10 +130,10 @@ function Hero() {
 
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center md:justify-end">
 
             <div
-              className={`w-[170px] h-[215px] w375:w-[210px] w375:h-[266px] md:w-[300px] md:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-md md:shadow-xl border-2 md:border ${
+              className={`w-[132px] h-[132px] w375:w-[148px] w375:h-[148px] md:w-[240px] md:h-[240px] lg:w-[300px] lg:h-[300px] rounded-full overflow-hidden shadow-md md:shadow-xl border-2 ${
                 darkMode
                   ? "border-slate-700"
                   : "border-slate-200"
@@ -142,6 +142,8 @@ function Hero() {
               <img
                 src="/profile.jpg"
                 alt="Diego Palacios"
+                width="460"
+                height="460"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -57,6 +57,16 @@ const data = {
         desc: "Management system for a real restaurant: a public site with a live menu and table booking, plus an internal panel with five roles (admin, cashier, waiter, kitchen and courier). Includes an order board, inventory alerts, sales reports and deliveries handled by in-house couriers or platforms.",
         tech: "React • Vite • Node.js • Express • MySQL • JWT • Karate DSL • Playwright",
       },
+
+      {
+        name: "Sportswear store",
+        image: "/cima-preview.png",
+        video: "/cimaVideo.mp4",
+        url: CIMA_URL,
+        desc: "Sportswear and footwear e-commerce with an internal panel: catalogue with per-variant stock, checkout, a cash module with VAT and shift reconciliation, and deliveries. Permissions, not job titles, decide what each employee sees.",
+        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
+      },
+
       {
         name: "Virtual Raffle",
         image: "/rifa-preview.png",
@@ -65,6 +75,7 @@ const data = {
         desc: "Raffle app for Redes Tevesat SAS, with an interactive prize wheel and animated sound built in React. The Laravel backend exposes a REST API over MySQL to manage customers, prizes, and entry validation.",
         tech: "React 18 • SCSS • Swiper • Laravel 9 • MySQL • REST API",
       },
+
       {
         name: "Contact Book",
         image: "/libreta-preview.png",
@@ -72,15 +83,6 @@ const data = {
         url: LIBRETA_URL,
         desc: "Contacts CRUD with JWT authentication, built as an end-to-end automation testing showcase: Karate DSL tests the full REST API and Playwright automates the UI using the Page Object Model pattern.",
         tech: "React • Node.js • Express • Sequelize • MySQL • JWT • Karate DSL • Playwright • POM",
-      },
-      
-      {
-        name: "Sportswear store",
-        image: "/cima-preview.png",
-        video: "/cimaVideo.mp4",
-        url: CIMA_URL,
-        desc: "Sportswear and footwear e-commerce with an internal panel: catalogue with per-variant stock, checkout, a cash module with VAT and shift reconciliation, and deliveries. Permissions, not job titles, decide what each employee sees.",
-        tech: "React • Vite • Node.js • Express • MySQL • JWT • RBAC • Karate DSL • Playwright",
       },
     ],
   },
