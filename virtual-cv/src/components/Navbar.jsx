@@ -75,8 +75,8 @@ function Navbar() {
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-emerald-400"
+                  : "text-slate-600 hover:text-emerald-700"
               }`}
             >
               {t.projects}
@@ -87,8 +87,8 @@ function Navbar() {
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-emerald-400"
+                  : "text-slate-600 hover:text-emerald-700"
               }`}
             >
               {t.experience}
@@ -99,8 +99,8 @@ function Navbar() {
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-emerald-400"
+                  : "text-slate-600 hover:text-emerald-700"
               }`}
             >
               {t.skills}
@@ -111,8 +111,8 @@ function Navbar() {
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-emerald-400"
+                  : "text-slate-600 hover:text-emerald-700"
               }`}
             >
               {t.education}
@@ -123,8 +123,8 @@ function Navbar() {
               onClick={() => cue(CUES.navClick)}
               className={`text-sm whitespace-nowrap transition ${
                 darkMode
-                  ? "text-slate-300 hover:text-blue-400"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-slate-300 hover:text-emerald-400"
+                  : "text-slate-600 hover:text-emerald-700"
               }`}
             >
               {t.contact}
@@ -185,7 +185,7 @@ function Navbar() {
               data-cuelume-press
               data-cuelume-release
               onClick={() => cue(CUES.download)}
-              className="inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-lg bg-blue-600 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700"
+              className="inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-lg bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 dark:bg-emerald-500 dark:text-emerald-950 dark:hover:bg-emerald-400 dark:active:bg-emerald-300"
             >
               {t.resumePdf}
             </a>
@@ -306,7 +306,7 @@ function Navbar() {
               cue(CUES.download)
               closeMenu()
             }}
-            className="mt-3 mb-2 text-center py-3 rounded-md bg-blue-600 text-white font-semibold text-sm"
+            className="mt-3 mb-2 text-center py-3 rounded-md bg-emerald-700 text-white font-semibold text-sm dark:bg-emerald-500 dark:text-emerald-950 dark:hover:bg-emerald-400 dark:active:bg-emerald-300"
           >
             {t.resumePdf}
           </a>

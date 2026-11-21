@@ -47,7 +47,7 @@ function Education() {
             {t.electronicEngineering}
           </h3>
 
-          <p className={`text-sm md:text-base font-medium ${darkMode ? "text-blue-400" : "text-blue-600"}`}>
+          <p className={`text-sm md:text-base font-medium ${darkMode ? "text-emerald-400" : "text-emerald-700"}`}>
             Universidad del Valle
           </p>
 

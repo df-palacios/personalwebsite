@@ -179,13 +179,13 @@ function Card({ p, btn, darkMode }) {
 
         <p
           className={`text-sm font-medium mt-3 mb-4 md:mb-6 ${
-            darkMode ? "text-blue-400" : "text-blue-600"
+            darkMode ? "text-emerald-400" : "text-emerald-700"
           }`}
         >
           {p.tech}
         </p>
 
-        <a href={p.url} target="_blank" rel="noopener noreferrer" onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
+        <a href={p.url} target="_blank" rel="noopener noreferrer" onClick={() => cue(CUES.openProject)} className="mt-auto inline-flex h-11 w-full items-center justify-center rounded-lg bg-emerald-700 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 dark:bg-emerald-500 dark:text-emerald-950 dark:hover:bg-emerald-400 dark:active:bg-emerald-300">
           {btn}
         </a>
       </div>

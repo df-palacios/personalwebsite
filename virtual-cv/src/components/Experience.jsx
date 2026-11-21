@@ -65,7 +65,7 @@ className={`py-8 md:py-16 border-t ${
                 {job.title}
               </h3>
 
-              <p className={`text-sm md:text-base font-medium ${darkMode ? "text-blue-400" : "text-blue-600"}`}>
+              <p className={`text-sm md:text-base font-medium ${darkMode ? "text-emerald-400" : "text-emerald-700"}`}>
                 {job.company}
               </p>
             </div>

@@ -7,6 +7,20 @@
    dispositivos reales más comunes. "md" (768px) se mantiene como el
    breakpoint de escritorio ya usado en todo el proyecto. */
 @theme {
+  /* Neutros: casi grises, con un leve tinte verde azulado para que
+     combinen con el esmeralda sin verse apagados. El esmeralda es el
+     de Tailwind (vivo), sin sobrescribir. */
+  --color-slate-50: #f6f9f8;
+  --color-slate-100: #edf2f0;
+  --color-slate-200: #dde5e2;
+  --color-slate-300: #c3cecb;
+  --color-slate-400: #93a19d;
+  --color-slate-500: #64726e;
+  --color-slate-600: #3d4b48;
+  --color-slate-700: #24322f;
+  --color-slate-800: #14211f;
+  --color-slate-900: #0b1514;
+  --color-slate-950: #060c0b;
   --breakpoint-w320: 320px;
   --breakpoint-w360: 360px;
   --breakpoint-w375: 375px;
@@ -57,7 +71,7 @@ body,
     bottom: 0.15em;
     width: 4px;
     border-radius: 9999px;
-    background: linear-gradient(to bottom, #3b82f6, #2563eb);
+    background: linear-gradient(to bottom, #34d399, #059669);
   }
 }
 
@@ -81,10 +95,10 @@ body,
 /* Divisor vertical sutil entre columnas de contenido (escritorio) */
 @media (min-width: 768px) {
   .divide-accent {
-    border-left: 1px solid rgb(226 232 240);
+    border-left: 1px solid rgb(221 229 226);
   }
 
   .dark .divide-accent {
-    border-left-color: rgb(30 41 59);
+    border-left-color: rgb(20 33 31);
   }
 }

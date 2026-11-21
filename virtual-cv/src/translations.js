@@ -1,13 +1,13 @@
 export const translations = {
   en: {
     heroTitle:
-      "QA AUTOMATION ENGINEER • FULL-STACK DEVELOPER",
+      ["Electronic Engineer", "Software Developer", "Systems Administrator"],
 
     heroDescription:
-      "Electronic Engineer with experience in QA Automation, Software Testing and Full-Stack Development. Skilled in Selenium, Playwright, Serenity BDD, Karate DSL, REST APIs, React, Node.js and data validation under Agile methodologies.",
+      "Electronic Engineer with experience in QA Automation, Software Testing, Full-Stack Development and Systems Administration. Skilled in Selenium, Playwright, Serenity BDD, Karate DSL, REST APIs, React, Node.js and data validation under Agile methodologies.",
 
     navbarSubtitle:
-      "QA Automation Engineer • Full-Stack Developer",
+      "Electronic Engineer",
 
     experience: "Professional Experience",
     skills: "Technical Skills",
@@ -76,13 +76,13 @@ export const translations = {
 
   es: {
     heroTitle:
-      "INGENIERO QA AUTOMATION • DESARROLLADOR FULL-STACK",
+      ["Ingeniero Electrónico", "Desarrollador de Software", "Administrador de Sistemas"],
 
     heroDescription:
-      "Ingeniero Electrónico con experiencia en Automatización QA, Testing de Software y Desarrollo Full-Stack. Con conocimientos en Selenium, Playwright, Serenity BDD, Karate DSL, APIs REST, React, Node.js y validación de datos bajo metodologías ágiles.",
+      "Ingeniero Electrónico con experiencia en Automatización QA, Testing de Software, Desarrollo Full-Stack y Administración de Sistemas. Con conocimientos en Selenium, Playwright, Serenity BDD, Karate DSL, APIs REST, React, Node.js y validación de datos bajo metodologías ágiles.",
 
     navbarSubtitle:
-      "Ingeniero QA Automation • Desarrollador Full-Stack",
+      "Ingeniero Electrónico",
 
     experience: "Experiencia Profesional",
     skills: "Habilidades Técnicas",

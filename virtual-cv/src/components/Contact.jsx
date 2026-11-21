@@ -38,8 +38,8 @@ function Contact() {
               href="mailto:ing.diegopalacios@outlook.com"
               className={`flex items-center justify-center gap-2 px-3 py-2 md:h-11 md:px-5 md:py-0 text-sm rounded-xl border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-700 text-white hover:border-blue-500"
-                  : "bg-white border-slate-300 text-slate-800 hover:border-blue-400"
+                  ? "bg-slate-800 border-slate-700 text-white hover:border-emerald-500"
+                  : "bg-white border-slate-300 text-slate-800 hover:border-emerald-400"
               }`}
             >
               <img src="/emailLogo.png" alt="" className="w-5 h-5" />
@@ -52,8 +52,8 @@ function Contact() {
               rel="noreferrer"
               className={`flex items-center justify-center gap-2 px-3 py-2 md:h-11 md:px-5 md:py-0 text-sm rounded-xl border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-700 text-white hover:border-blue-500"
-                  : "bg-white border-slate-300 text-slate-800 hover:border-blue-400"
+                  ? "bg-slate-800 border-slate-700 text-white hover:border-emerald-500"
+                  : "bg-white border-slate-300 text-slate-800 hover:border-emerald-400"
               }`}
             >
               <img src="/githubLogo.png" alt="" className="w-5 h-5" />
@@ -66,8 +66,8 @@ function Contact() {
               rel="noreferrer"
               className={`flex items-center justify-center gap-2 px-3 py-2 md:h-11 md:px-5 md:py-0 text-sm rounded-xl border transition ${
                 darkMode
-                  ? "bg-slate-800 border-slate-700 text-white hover:border-blue-500"
-                  : "bg-white border-slate-300 text-slate-800 hover:border-blue-400"
+                  ? "bg-slate-800 border-slate-700 text-white hover:border-emerald-500"
+                  : "bg-white border-slate-300 text-slate-800 hover:border-emerald-400"
               }`}
             >
               <img src="/linkedinLogo.png" alt="" className="w-5 h-5" />

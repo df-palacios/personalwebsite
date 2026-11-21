@@ -110,8 +110,8 @@ function Skills() {
                     key={i}
                     className={
                       darkMode
-                        ? "px-3 py-1.5 text-sm rounded-lg bg-blue-950 text-blue-200 border border-blue-800"
-                        : "px-3 py-1.5 text-sm rounded-lg bg-blue-50 text-blue-800 border border-blue-200"
+                        ? "px-3 py-1.5 text-sm rounded-lg bg-emerald-950 text-emerald-200 border border-emerald-900"
+                        : "px-3 py-1.5 text-sm rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-200"
                     }
                   >
                     {skill}

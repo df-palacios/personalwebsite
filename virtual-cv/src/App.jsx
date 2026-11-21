@@ -43,7 +43,7 @@ function App() {
 
         md:border-x
         md:border-slate-200
-        md:shadow-[0_0_60px_rgba(15,23,42,0.05)]
+        md:shadow-[0_0_60px_rgba(8,19,15,0.05)]
 
         dark:bg-slate-900/40
         md:dark:border-slate-800
